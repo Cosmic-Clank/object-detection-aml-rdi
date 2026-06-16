@@ -1,0 +1,38 @@
+# --- TT100K raw dataset (huge: ~19GB zip + extracted images) ---
+tt100k_2021.zip
+tt100k_2021/
+
+# --- generated data-prep outputs ---
+yolo/
+coco/
+classes.json
+prep_sanity.png
+prep_summary.json
+
+# --- model / training artifacts ---
+runs/
+runs_tt100k/
+smoke.log
+*.pt
+*.pth
+*.onnx
+*.engine
+weights/
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+.venv/
+venv/
+env/
+.ipynb_checkpoints/
+
+# --- editors / OS ---
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
