@@ -10,8 +10,6 @@ prep_sanity.png
 prep_summary.json
 
 # --- model / training artifacts ---
-runs/
-runs_tt100k/
 smoke.log
 *.pt
 *.pth
