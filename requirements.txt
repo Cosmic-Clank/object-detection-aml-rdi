@@ -28,3 +28,8 @@ scipy==1.17.0
 scikit-learn==1.8.0
 matplotlib==3.10.8
 pillow==12.1.1
+
+# --- imperceptibility metrics (PSNR/SSIM via skimage; LPIPS perceptual distance) ---
+scikit-image==0.26.0
+lpips==0.1.4
+

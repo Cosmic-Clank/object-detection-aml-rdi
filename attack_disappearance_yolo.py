@@ -228,6 +228,9 @@ def main():
         import art
         from art.estimators.object_detection import PyTorchYolo
         from art.attacks.evasion import ProjectedGradientDescent
+        # imperceptibility metrics (skimage required; lpips optional, set up below)
+        from skimage.metrics import peak_signal_noise_ratio as psnr_fn
+        from skimage.metrics import structural_similarity as ssim_fn
     except Exception as e:
         sys.exit(f"ENV ERROR (import): {type(e).__name__}: {e}")
     print(f"ART {art.__version__} | torch {torch.__version__} | "
@@ -312,6 +315,34 @@ def main():
                         "score": float(s)})
         return res
 
+    # ----- imperceptibility metrics (ADDITIVE measurement; attack unchanged) -----
+    # Why these apply here: PGD is an ADDITIVE L-inf perturbation (unlike a
+    # geometric warp such as WaNet), so PSNR/SSIM/LPIPS -- which are additive-
+    # perturbation similarity metrics -- are the correct tools. The PRIMARY
+    # imperceptibility measure is still eps itself (the L-inf budget / standard
+    # PGD threat model, Madry et al. 2018); PSNR/SSIM/LPIPS are SUPPLEMENTARY.
+    # LPIPS model is instantiated ONCE here (loads a network), not per image.
+    lpips_model = None
+    try:
+        import lpips as _lpips
+        lpips_model = _lpips.LPIPS(net="alex", verbose=False).to(device).eval()
+        print("imperceptibility: PSNR + SSIM (skimage) + LPIPS(alex) ready")
+    except Exception as e:
+        print(f"imperceptibility: LPIPS unavailable ({type(e).__name__}: {e}); "
+              f"reporting PSNR + SSIM only")
+
+    def perceptual(clean_chw, adv_chw):
+        """clean/adv: [0,1] CHW float (same space fed to the attack)."""
+        p = float(psnr_fn(clean_chw, adv_chw, data_range=1.0))
+        s = float(ssim_fn(clean_chw, adv_chw, channel_axis=0, data_range=1.0))
+        lp = None
+        if lpips_model is not None:
+            with torch.no_grad():                 # LPIPS expects inputs in [-1,1]
+                a = torch.from_numpy(clean_chw[None].astype(np.float32) * 2 - 1).to(device)
+                b = torch.from_numpy(adv_chw[None].astype(np.float32) * 2 - 1).to(device)
+                lp = float(lpips_model(a, b))
+        return p, s, lp
+
     summary = {}
     for eps_name, eps in eps_list:
         attack = ProjectedGradientDescent(
@@ -321,6 +352,7 @@ def main():
 
         tot_clean = tot_gone = tot_relabel = tot_persist = tot_adv = 0
         conf_drops = []
+        psnrs, ssims, lpipss = [], [], []
         clean_results, adv_results = [], []
         n_panels = 0
 
@@ -350,6 +382,12 @@ def main():
             tot_clean += len(cb); tot_gone += gone; tot_relabel += relab
             tot_persist += persist; tot_adv += len(ab); conf_drops += drops
 
+            # imperceptibility on the clean-vs-adv pair (additive measurement only)
+            p, s, lp = perceptual(chw, x_adv[0])
+            psnrs.append(p); ssims.append(s)
+            if lp is not None:
+                lpipss.append(lp)
+
             if args.smoke and n_panels < 4:
                 cp = draw(chw, cb, cl, cs, names, f"CLEAN ({len(cb)} dets)")
                 apnl = draw(x_adv[0], ab, al, as_, names, f"ADV eps={eps_name} ({len(ab)} dets)")
@@ -375,42 +413,74 @@ def main():
             "gone_count": tot_gone,
             "persisted_count": tot_persist,
             "mean_conf_drop": float(np.mean(conf_drops)) if conf_drops else 0.0,
+            "psnr_mean": float(np.mean(psnrs)) if psnrs else None,
+            "ssim_mean": float(np.mean(ssims)) if ssims else None,
+            "lpips_mean": float(np.mean(lpipss)) if lpipss else None,
+            "perceptual_count": len(psnrs),
         }
+        s_ = summary[eps_name]
+        lp_str = f"{s_['lpips_mean']:.4f}" if s_["lpips_mean"] is not None else "n/a"
         print(f"  [{eps_name}] disappearance={dis_rate:.3f}  "
               f"clean_dets={tot_clean}->adv_dets={tot_adv}  "
               f"gone={tot_gone} relabeled={tot_relabel} persisted={tot_persist}  "
-              f"mAP50 {clean_map}->{adv_map}")
+              f"mAP50 {clean_map}->{adv_map}  "
+              f"PSNR={s_['psnr_mean']:.2f}dB SSIM={s_['ssim_mean']:.4f} LPIPS={lp_str}")
 
     # ----- outputs -----
     with open(args.out_json, "w") as f:
         json.dump(summary, f, indent=2)
 
-    # strength curve
+    # stealth-vs-potency curve: disappearance rises with eps (potency) while
+    # PSNR/SSIM fall and LPIPS rises (stealth degrades).
     try:
         import matplotlib
         matplotlib.use("Agg")
         import matplotlib.pyplot as plt
         xs = [summary[e]["eps_value"] * 255 for e, _ in eps_list]
-        ys = [summary[e]["disappearance_rate"] for e, _ in eps_list]
-        plt.figure(figsize=(6, 4))
-        plt.plot(xs, ys, "o-", lw=2)
-        plt.xlabel("eps (x/255, L-inf)"); plt.ylabel("disappearance rate")
-        plt.title("YOLOv8s TT100K — PGD disappearance vs eps")
-        plt.grid(True, alpha=0.3); plt.ylim(0, 1)
-        plt.tight_layout()
-        plt.savefig(os.path.join(args.out_dir, "disappearance_vs_eps.png"), dpi=120)
+        dis = [summary[e]["disappearance_rate"] for e, _ in eps_list]
+        psnr_v = [summary[e]["psnr_mean"] for e, _ in eps_list]
+        ssim_v = [summary[e]["ssim_mean"] for e, _ in eps_list]
+        lpips_v = [summary[e]["lpips_mean"] for e, _ in eps_list]
+        have_lp = all(v is not None for v in lpips_v)
+
+        fig, (ax0, ax1) = plt.subplots(1, 2, figsize=(11, 4))
+        ax0.plot(xs, dis, "o-", color="crimson", lw=2)
+        ax0.set_xlabel("eps (x/255, L-inf)"); ax0.set_ylabel("disappearance rate")
+        ax0.set_ylim(0, 1); ax0.grid(True, alpha=0.3)
+        ax0.set_title("potency: disappearance vs eps")
+
+        ax1.plot(xs, ssim_v, "o-", color="tab:blue", label="SSIM")
+        if have_lp:
+            ax1.plot(xs, lpips_v, "s-", color="tab:green", label="LPIPS")
+        ax1.set_xlabel("eps (x/255, L-inf)"); ax1.set_ylabel("SSIM / LPIPS")
+        ax1.set_ylim(0, 1); ax1.grid(True, alpha=0.3)
+        axr = ax1.twinx()
+        axr.plot(xs, psnr_v, "^--", color="tab:orange", label="PSNR (dB)")
+        axr.set_ylabel("PSNR (dB)")
+        ax1.set_title("stealth: imperceptibility vs eps")
+        h1, l1 = ax1.get_legend_handles_labels()
+        h2, l2 = axr.get_legend_handles_labels()
+        ax1.legend(h1 + h2, l1 + l2, loc="best", fontsize=8)
+
+        fig.suptitle("YOLOv8s TT100K — PGD disappearance: stealth-vs-potency")
+        fig.tight_layout()
+        fig.savefig(os.path.join(args.out_dir, "disappearance_vs_eps.png"), dpi=120)
+        plt.close(fig)
     except Exception as e:
         print(f"  plot skipped ({type(e).__name__}: {e})")
 
     # summary table
-    print("\n" + "=" * 64)
-    print(f"{'eps':>8} | {'disappearance':>13} | {'clean->adv dets':>18}")
-    print("-" * 64)
+    print("\n" + "=" * 86)
+    print(f"{'eps':>7} | {'disappear':>9} | {'clean->adv':>12} | {'PSNR(dB)':>8} | "
+          f"{'SSIM':>6} | {'LPIPS':>6}")
+    print("-" * 86)
     for eps_name, _ in eps_list:
         s = summary[eps_name]
-        print(f"{eps_name:>8} | {s['disappearance_rate']:>13.3f} | "
-              f"{str(s['clean_det_count'])+'->'+str(s['adv_det_count']):>18}")
-    print("=" * 64)
+        lp = f"{s['lpips_mean']:.4f}" if s["lpips_mean"] is not None else "n/a"
+        print(f"{eps_name:>7} | {s['disappearance_rate']:>9.3f} | "
+              f"{str(s['clean_det_count'])+'->'+str(s['adv_det_count']):>12} | "
+              f"{s['psnr_mean']:>8.2f} | {s['ssim_mean']:>6.4f} | {lp:>6}")
+    print("=" * 86)
     print(f"JSON -> {args.out_json} | panels/plot -> {args.out_dir}/")
 
 
