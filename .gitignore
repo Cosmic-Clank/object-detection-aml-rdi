@@ -17,6 +17,10 @@ smoke.log
 *.engine
 weights/
 
+# --- adversarial attack outputs ---
+disappearance_yolo.json
+disappearance_yolo_out/
+
 # --- Python ---
 __pycache__/
 *.py[cod]
