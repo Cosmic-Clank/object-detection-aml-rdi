@@ -126,17 +126,29 @@ def draw(np_img_chw, boxes, labels, scores, names, title):
     from PIL import Image, ImageDraw, ImageFont
     img = (np.transpose(np_img_chw, (1, 2, 0)) * 255).clip(0, 255).astype(np.uint8)
     im = Image.fromarray(img)
+    W, H = im.size
     d = ImageDraw.Draw(im)
     try:
         font = ImageFont.truetype("arial.ttf", 22)
     except OSError:
         font = ImageFont.load_default()
     for b, l, s in zip(boxes, labels, scores):
-        d.rectangle([float(b[0]), float(b[1]), float(b[2]), float(b[3])],
-                    outline=(255, 40, 40), width=3)
+        # clamp to image bounds and order coords; adv NMS can yield out-of-bounds
+        # or inverted boxes, which PIL.rectangle rejects (y1 >= y0 required).
+        x0 = min(max(float(b[0]), 0), W - 1)
+        y0 = min(max(float(b[1]), 0), H - 1)
+        x1 = min(max(float(b[2]), 0), W - 1)
+        y1 = min(max(float(b[3]), 0), H - 1)
+        if x1 < x0:
+            x0, x1 = x1, x0
+        if y1 < y0:
+            y0, y1 = y1, y0
+        d.rectangle([x0, y0, x1, y1], outline=(255, 40, 40), width=3)
         tag = f"{names[int(l)]} {s:.2f}"
-        d.rectangle([b[0], max(0, b[1] - 22), b[0] + 11 * len(tag), b[1]], fill=(255, 40, 40))
-        d.text((b[0] + 2, max(0, b[1] - 22)), tag, fill=(255, 255, 255), font=font)
+        ty0 = max(0.0, y0 - 22)
+        ty1 = max(ty0, y0)                       # guarantee ty1 >= ty0
+        d.rectangle([x0, ty0, min(x0 + 11 * len(tag), W - 1), ty1], fill=(255, 40, 40))
+        d.text((x0 + 2, ty0), tag, fill=(255, 255, 255), font=font)
     d.text((6, 6), title, fill=(255, 255, 0), font=font)
     return im
 
