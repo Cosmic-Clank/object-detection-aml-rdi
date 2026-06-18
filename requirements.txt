@@ -1,0 +1,30 @@
+# TT100K object-detection + adversarial-robustness stack.
+# Python 3.14, CUDA 12.8. Pins chosen to match the GPU run box and keep the ART
+# <-> Ultralytics glue reproducible (see attack_disappearance_yolo.py).
+#
+# ---------------------------------------------------------------------------
+# PyTorch must be installed FIRST, from the CUDA 12.8 index (not plain PyPI),
+# so it is listed here as guidance rather than a hard pin. The run box uses
+# torch 2.10.0+cu128; this dev box has 2.11.0+cu128 — both work with the stack
+# below. Pick ONE torch/torchvision pair and install it via:
+#
+#   pip install torch==2.10.0 torchvision==0.25.0 --index-url https://download.pytorch.org/whl/cu128
+#
+# (CPU-only fallback: drop the --index-url and the +cu128 builds.)
+# ---------------------------------------------------------------------------
+
+# --- adversarial robustness (native Ultralytics YOLO support needs >= 1.20) ---
+adversarial-robustness-toolbox==1.20.1
+
+# --- detector + training ---
+ultralytics==8.4.14
+
+# --- COCO eval (Faster R-CNN + attack mAP); stable-ABI wheel works on py3.14 ---
+pycocotools==2.0.11
+
+# --- scientific / plotting / IO (also ART runtime deps) ---
+numpy==2.4.2
+scipy==1.17.0
+scikit-learn==1.8.0
+matplotlib==3.10.8
+pillow==12.1.1

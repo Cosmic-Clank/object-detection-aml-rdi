@@ -21,17 +21,16 @@ disappearance) from gone, so the two are not conflated.
 
 ----------------------------------------------------------------------------
 INTEGRATION ASSUMPTIONS (flagged per the brief):
-  A1. YOLOv8 is anchor-free with NO objectness channel. ART's PyTorchYolo eval
-      path expects v3/v5 raw output [xc,yc,w,h,OBJ,cls...]. We therefore do NOT
-      use ART.predict for the metric; we run Ultralytics' own NMS for both clean
-      and adversarial detections, and pass y explicitly to PGD so ART never
-      calls predict. (A v5-shaped eval forward IS provided, synthesizing
-      obj=max(class_conf), only so the estimator is complete.)
+  A1. We use ART >= 1.20's native Ultralytics path (is_ultralytics=True,
+      model_name=...): ART wraps the DetectionModel with PyTorchYoloLossWrapper
+      (sets v8DetectionLoss). For the disappearance METRIC we still run
+      Ultralytics' own NMS in detect() (controls conf/iou, matches clean eval)
+      and pass y explicitly to PGD, so the metric never depends on ART.predict.
   A2. Untargeted PGD maximizes Ultralytics' v8 detection loss (box+cls+dfl) w.r.t.
-      the clean detections passed as y. With no objectness, the cls term drives
-      class confidence below the conf threshold -> the box drops out at NMS ->
-      disappearance. (model.loss returns a single differentiable total; we expose
-      it as 'loss_total' and set attack_losses=('loss_total',).)
+      the clean detections passed as y. YOLOv8 is anchor-free with no objectness
+      channel, so the cls term drives class confidence below the conf threshold
+      -> the box drops out at NMS -> disappearance. ART's wrapper exposes
+      'loss_total'; we set attack_losses=('loss_total',).
   A3. Images are 2048x2048 (square) -> resized to imgsz x imgsz (default 1280),
       no letterbox distortion. All detections live in the imgsz pixel space;
       for COCO mAP they are scaled back to original (2048) coordinates.
@@ -73,56 +72,16 @@ def iou_matrix(a, b):
 
 
 # --------------------------------------------------------------------------- #
-# Ultralytics YOLOv8 -> ART PyTorchYolo wrapper (the only integration code)
-# --------------------------------------------------------------------------- #
-def build_wrapper(torch, nn):
-    class UltralyticsYoloWrapper(nn.Module):
-        """Adapts an Ultralytics DetectionModel to ART's PyTorchYolo contract.
-
-        train + targets -> dict of losses (ART sums attack_losses).
-        eval (no targets) -> raw [B, anchors, 5+nc] in v5 layout (A1; not used
-        for the metric).
-        """
-
-        def __init__(self, det_model, nc):
-            super().__init__()
-            self.model = det_model
-            self.nc = nc
-
-        def forward(self, x, targets=None):
-            if self.training and targets is not None:
-                # targets: [total, 6] = [img_idx, cls, xc, yc, w, h] (normalized)
-                batch = {
-                    "img": x,
-                    "batch_idx": targets[:, 0],
-                    "cls": targets[:, 1:2],
-                    "bboxes": targets[:, 2:6],
-                }
-                loss, _ = self.model.loss(batch)   # differentiable scalar (A2)
-                return {"loss_total": loss}
-            # eval path (A1): synthesize v5 layout so the estimator is complete
-            preds = self.model(x)
-            if isinstance(preds, (list, tuple)):
-                preds = preds[0]
-            preds = preds.permute(0, 2, 1)         # [B, anchors, 4+nc]
-            boxes, cls = preds[..., :4], preds[..., 4:]
-            obj = cls.max(dim=-1, keepdim=True).values
-            return torch.cat([boxes, obj, cls], dim=-1)
-
-    return UltralyticsYoloWrapper
-
-
-# --------------------------------------------------------------------------- #
 # detection via Ultralytics NMS (identical path for clean and adversarial)
 # --------------------------------------------------------------------------- #
-def detect(det_model, x, conf, iou, nc, torch, ops):
+def detect(det_model, x, conf, iou, nc, torch, nms_fn):
     """x: [1,3,H,W] in [0,1]. Returns numpy boxes[n,4] xyxy, scores[n], labels[n]."""
     det_model.eval()
     with torch.no_grad():
         preds = det_model(x)
         if isinstance(preds, (list, tuple)):
             preds = preds[0]
-        out = ops.non_max_suppression(preds, conf_thres=conf, iou_thres=iou, nc=nc)[0]
+        out = nms_fn(preds, conf_thres=conf, iou_thres=iou, nc=nc)[0]
     out = out.detach().cpu().numpy()
     if out.size == 0:
         return (np.zeros((0, 4), np.float32), np.zeros((0,), np.float32),
@@ -234,15 +193,21 @@ def main():
                     help="20 images, eps=8/255 only, save before/after panels")
     ap.add_argument("--out-json", default="disappearance_yolo.json")
     ap.add_argument("--out-dir", default="disappearance_yolo_out")
+    ap.add_argument("--model-name", default="yolov8s",
+                    help="ART loss selector for is_ultralytics (v8 vs v10)")
     args = ap.parse_args()
 
     # ----- STEP 0: environment / version report (also lives here for reproducibility) -----
     try:
         import torch
-        import torch.nn as nn
         import ultralytics
         from ultralytics import YOLO
-        from ultralytics.utils import ops
+        # non_max_suppression moved from ultralytics.utils.ops -> .nms in 8.4.x;
+        # try the new location first, fall back for older versions.
+        try:
+            from ultralytics.utils.nms import non_max_suppression as nms_fn
+        except ImportError:
+            from ultralytics.utils.ops import non_max_suppression as nms_fn
         import art
         from art.estimators.object_detection import PyTorchYolo
         from art.attacks.evasion import ProjectedGradientDescent
@@ -269,13 +234,17 @@ def main():
         eps_list = [("2/255", 2 / 255), ("4/255", 4 / 255), ("8/255", 8 / 255)]
         n_images = args.num_images
 
-    # ----- model + ART estimator -----
+    # ----- model + ART estimator (native Ultralytics path, ART >= 1.20) -----
+    # ART wraps the DetectionModel with its PyTorchYoloLossWrapper, which sets up
+    # v8DetectionLoss and returns {loss_total, loss_box, loss_cls, loss_dfl}.
+    # We still run our own NMS in detect() for the metric (controls conf/iou and
+    # avoids depending on ART's predict). (A1, A2)
     yolo = YOLO(args.weights)
     det_model = yolo.model.to(device).float()
-    Wrapper = build_wrapper(torch, nn)
-    wrapper = Wrapper(det_model, nc).to(device)
     estimator = PyTorchYolo(
-        model=wrapper,
+        model=det_model,
+        is_ultralytics=True,
+        model_name=args.model_name,
         input_shape=(3, args.imgsz, args.imgsz),
         channels_first=True,
         clip_values=(0.0, 1.0),                 # A4
@@ -311,7 +280,7 @@ def main():
     for img_id in img_ids:
         chw, W, H = load_image(img_id)
         x = torch.from_numpy(chw[None]).to(device)
-        cb, cs, cl = detect(det_model, x, args.conf, args.iou, nc, torch, ops)
+        cb, cs, cl = detect(det_model, x, args.conf, args.iou, nc, torch, nms_fn)
         cache[img_id] = {"chw": chw, "W": W, "H": H, "cb": cb, "cs": cs, "cl": cl}
 
     def to_coco_results(img_id, boxes, scores, labels):
@@ -350,7 +319,7 @@ def main():
             x_adv = attack.generate(x=x_np, y=y)
 
             xa = torch.from_numpy(x_adv).to(device)
-            ab, as_, al = detect(det_model, xa, args.conf, args.iou, nc, torch, ops)
+            ab, as_, al = detect(det_model, xa, args.conf, args.iou, nc, torch, nms_fn)
             adv_results += to_coco_results(img_id, ab, as_, al)
 
             gone, relab, persist, drops = disappearance_stats(cb, cl, cs, ab, al, as_)
