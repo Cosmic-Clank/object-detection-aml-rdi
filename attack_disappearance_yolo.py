@@ -207,6 +207,11 @@ def main():
     ap.add_argument("--out-dir", default="disappearance_yolo_out")
     ap.add_argument("--model-name", default="yolov8s",
                     help="ART loss selector for is_ultralytics (v8 vs v10)")
+    ap.add_argument("--mode", choices=["vanish", "untargeted"], default="vanish",
+                    help="vanish: targeted PGD toward NO objects (minimize all class "
+                         "confidence; TOG-style clean disappearance). untargeted: "
+                         "maximize detection loss away from clean dets (v5-style; on "
+                         "v8 this FABRICATES false positives instead of vanishing).")
     args = ap.parse_args()
 
     # ----- STEP 0: environment / version report (also lives here for reproducibility) -----
@@ -311,7 +316,8 @@ def main():
     for eps_name, eps in eps_list:
         attack = ProjectedGradientDescent(
             estimator=estimator, norm=np.inf, eps=eps, eps_step=eps / 4,
-            max_iter=args.max_iter, targeted=False, batch_size=1, verbose=False)
+            max_iter=args.max_iter, targeted=(args.mode == "vanish"),
+            batch_size=1, verbose=False)
 
         tot_clean = tot_gone = tot_relabel = tot_persist = tot_adv = 0
         conf_drops = []
@@ -325,8 +331,14 @@ def main():
             if len(cb) == 0:
                 continue   # nothing detected clean -> can't disappear (A: skip)
 
-            # untargeted PGD: y = the clean detections (drive the model away from them)
-            y = [{"boxes": cb.astype(np.float32), "labels": cl.astype(np.int64)}]
+            if args.mode == "vanish":
+                # targeted toward NO objects: descend the all-background cls loss
+                # -> push every detection below conf threshold (clean disappearance).
+                y = [{"boxes": np.zeros((0, 4), np.float32),
+                      "labels": np.zeros((0,), np.int64)}]
+            else:
+                # untargeted: drive the model away from its own clean detections.
+                y = [{"boxes": cb.astype(np.float32), "labels": cl.astype(np.int64)}]
             x_np = chw[None].astype(np.float32)
             x_adv = attack.generate(x=x_np, y=y)
 
