@@ -200,6 +200,9 @@ def main():
     ap.add_argument("--num-images", type=int, default=500,
                     help="fixed subset size for the full sweep (state in report)")
     ap.add_argument("--max-iter", type=int, default=20, help="PGD-20")
+    ap.add_argument("--eps-list", default="1,2,4,6,8,12,16",
+                    help="comma-separated L-inf budgets as k/255 (full sweep only); "
+                         "default 1,2,4,6,8,12,16 -> {1..16}/255")
     ap.add_argument("--seed", type=int, default=0)
     ap.add_argument("--smoke", action="store_true",
                     help="20 images, eps=8/255 only, save before/after panels")
@@ -246,12 +249,23 @@ def main():
     names = classes["names"]
     nc = classes["num_classes"]
 
-    # eps sweep (in [0,1] units; A4)
+    # eps sweep (in [0,1] units; A4). Each entry is parsed as k/255.
+    def parse_eps(spec):
+        out = []
+        for tok in spec.split(","):
+            tok = tok.strip()
+            if not tok:
+                continue
+            k = float(tok)
+            name = f"{int(k) if k == int(k) else k}/255"
+            out.append((name, k / 255.0))
+        return out
+
     if args.smoke:
         eps_list = [("8/255", 8 / 255)]
         n_images = 20
     else:
-        eps_list = [("2/255", 2 / 255), ("4/255", 4 / 255), ("8/255", 8 / 255)]
+        eps_list = parse_eps(args.eps_list)
         n_images = args.num_images
 
     # ----- model + ART estimator (native Ultralytics path, ART >= 1.20) -----
