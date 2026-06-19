@@ -20,6 +20,8 @@ weights/
 # --- adversarial attack outputs ---
 disappearance_yolo.json
 disappearance_yolo_out/
+disappearance_frcnn.json
+disappearance_frcnn_out/
 
 # --- Python ---
 __pycache__/
