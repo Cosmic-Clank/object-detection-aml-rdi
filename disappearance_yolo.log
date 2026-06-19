@@ -1,0 +1,20 @@
+C:\Users\RA-02\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\torchvision\models\_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+C:\Users\RA-02\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\torchvision\models\_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=AlexNet_Weights.IMAGENET1K_V1`. You can also use `weights=AlexNet_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+ART 1.20.1 | torch 2.10.0+cu128 | ultralytics 8.4.14
+images: 500 (subset of 2979 val images, seed=0)
+eps sweep: ['2/255', '4/255', '8/255'], PGD-20, conf=0.25, iou=0.7, imgsz=1280
+imperceptibility: PSNR + SSIM (skimage) + LPIPS(alex) ready
+  [2/255] disappearance=0.965  clean_dets=1354->adv_dets=50  gone=1306 relabeled=11 persisted=37  mAP50 0.9145571782784201->0.021026769343601023  PSNR=45.32dB SSIM=0.9830 LPIPS=0.0470
+  [4/255] disappearance=0.994  clean_dets=1354->adv_dets=12  gone=1346 relabeled=4 persisted=4  mAP50 0.9145571782784201->0.0025302530253025297  PSNR=39.68dB SSIM=0.9389 LPIPS=0.1602
+  [8/255] disappearance=1.000  clean_dets=1354->adv_dets=22  gone=1354 relabeled=0 persisted=0  mAP50 0.9145571782784201->0.0  PSNR=33.84dB SSIM=0.8048 LPIPS=0.3442
+
+======================================================================================
+    eps | disappear |   clean->adv | PSNR(dB) |   SSIM |  LPIPS
+--------------------------------------------------------------------------------------
+  2/255 |     0.965 |     1354->50 |    45.32 | 0.9830 | 0.0470
+  4/255 |     0.994 |     1354->12 |    39.68 | 0.9389 | 0.1602
+  8/255 |     1.000 |     1354->22 |    33.84 | 0.8048 | 0.3442
+======================================================================================
+JSON -> disappearance_yolo.json | panels/plot -> disappearance_yolo_out/
