@@ -96,7 +96,11 @@ def main():
                     help="score threshold (default yolo 0.25, frcnn 0.5)")
     ap.add_argument("--iou", type=float, default=0.7, help="yolo NMS iou")
     ap.add_argument("--device", default="cuda")
-    ap.add_argument("--num-images", type=int, default=500, help="same subset as disappearance")
+    ap.add_argument("--num-images", type=int, default=500,
+                    help="subset size (full sweep). Use --all-val for all 2979 val images")
+    ap.add_argument("--all-val", action="store_true",
+                    help="use the ENTIRE val set (all images) — recommended for "
+                         "misclassification so the source-class (pl40) denominator is large")
     ap.add_argument("--max-iter", type=int, default=20, help="PGD-20")
     ap.add_argument("--eps-list", default="1,2,4,6,8,12,16")
     ap.add_argument("--seed", type=int, default=0, help="MUST be 0 to match other runs")
@@ -246,18 +250,30 @@ def main():
                 if len(img_ids) >= 20:
                     break
     else:
-        img_ids = sorted(rng.sample(all_img_ids, min(args.num_images, len(all_img_ids))))
+        n_sel = len(all_img_ids) if args.all_val else min(args.num_images, len(all_img_ids))
+        img_ids = sorted(rng.sample(all_img_ids, n_sel))
         for img_id in img_ids:
             chw, W, H = load_image(img_id)
             cb, cs, cl = detect_fn(torch.from_numpy(chw[None]).to(device))
             cache[img_id] = {"chw": chw, "W": W, "H": H, "cb": cb, "cs": cs, "cl": cl}
 
     src_total = sum(int((cache[i]["cl"] == source_id).sum()) for i in img_ids)
+    if args.smoke:
+        scope = f"smoke: {len(img_ids)} images containing {args.source}"
+    elif args.all_val:
+        scope = f"FULL val set: all {len(img_ids)} images"
+    else:
+        scope = f"{len(img_ids)}-image subset"
     print(f"detector={det} | pair {args.source}(id {source_id}) -> {args.target}(id {target_id})")
-    print(f"images: {len(img_ids)} (seed={args.seed}{'' if args.smoke else ', same 500-subset as disappearance'})")
-    print(f"source '{args.source}' objects detected clean in eval set: {src_total}")
-    if src_total < 30:
-        print(f"  WARNING: only {src_total} source objects — ASR may be noisy; consider --num-images larger")
+    print(f"images: {scope} (seed={args.seed})")
+    print(f"NOTE: misclassification ASR counts ONLY source-class ({args.source}) objects, so the "
+          f"denominator differs by design from the disappearance run's 500-subset (all detections).")
+    print(f"source '{args.source}' objects detected clean across eval set: {src_total}")
+    if src_total < 100:
+        print(f"  WARNING: only {src_total} source objects (<100) — ASR confidence is limited; "
+              f"use --all-val (or a larger subset) for a more stable denominator")
+    else:
+        print(f"  source count {src_total} (>=100) -> ASR denominator is stable")
     print(f"{'SMOKE: ' if args.smoke else ''}eps={[e[0] for e in eps_list]}, PGD-{args.max_iter}, conf={args.conf}")
 
     justification = (f"{args.source}->{args.target}: both top speed-limit classes by instance count "
