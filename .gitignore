@@ -18,14 +18,14 @@ smoke.log
 weights/
 
 # --- adversarial attack outputs ---
-disappearance_yolo.json
-disappearance_yolo_out/
-disappearance_frcnn.json
-disappearance_frcnn_out/
-misclassification_yolo.json
-misclassification_frcnn.json
-misclassification_yolo_out/
-misclassification_frcnn_out/
+# disappearance_yolo.json
+# disappearance_yolo_out/
+# disappearance_frcnn.json
+# disappearance_frcnn_out/
+# misclassification_yolo.json
+# misclassification_frcnn.json
+# misclassification_yolo_out/
+# misclassification_frcnn_out/
 
 # --- Python ---
 __pycache__/

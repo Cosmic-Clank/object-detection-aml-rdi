@@ -1,0 +1,102 @@
+{
+  "detector": "yolo",
+  "source": "pl40",
+  "target": "pl80",
+  "source_id": 28,
+  "target_id": 33,
+  "source_objects_eval": 478,
+  "justification": "pl40->pl80: both top speed-limit classes by instance count (strongly detected by both detectors); pl40 most frequent speed limit in val -> stable ASR; doubling perceived limit is a dangerous overspeed scenario.",
+  "eps": {
+    "1/255": {
+      "eps_value": 0.00392156862745098,
+      "targeted_success_rate": 0.8117154811715481,
+      "source_objects": 478,
+      "targeted_success": 388,
+      "other_wrong": 19,
+      "still_source": 43,
+      "vanished": 28,
+      "psnr_mean": 51.059110833655104,
+      "ssim_mean": 0.9954633600038031,
+      "lpips_mean": 0.00921191960097412,
+      "perceptual_count": 460
+    },
+    "2/255": {
+      "eps_value": 0.00784313725490196,
+      "targeted_success_rate": 0.9456066945606695,
+      "source_objects": 478,
+      "targeted_success": 452,
+      "other_wrong": 10,
+      "still_source": 9,
+      "vanished": 7,
+      "psnr_mean": 45.53804039547296,
+      "ssim_mean": 0.9836844896492751,
+      "lpips_mean": 0.043866306118181216,
+      "perceptual_count": 460
+    },
+    "4/255": {
+      "eps_value": 0.01568627450980392,
+      "targeted_success_rate": 0.9748953974895398,
+      "source_objects": 478,
+      "targeted_success": 466,
+      "other_wrong": 5,
+      "still_source": 2,
+      "vanished": 5,
+      "psnr_mean": 39.780770994231005,
+      "ssim_mean": 0.9401039192210073,
+      "lpips_mean": 0.15616068191340435,
+      "perceptual_count": 460
+    },
+    "6/255": {
+      "eps_value": 0.023529411764705882,
+      "targeted_success_rate": 0.9435146443514645,
+      "source_objects": 478,
+      "targeted_success": 451,
+      "other_wrong": 16,
+      "still_source": 4,
+      "vanished": 7,
+      "psnr_mean": 36.332491694914914,
+      "ssim_mean": 0.8776560344125913,
+      "lpips_mean": 0.25954752110916635,
+      "perceptual_count": 460
+    },
+    "8/255": {
+      "eps_value": 0.03137254901960784,
+      "targeted_success_rate": 0.9435146443514645,
+      "source_objects": 478,
+      "targeted_success": 451,
+      "other_wrong": 19,
+      "still_source": 2,
+      "vanished": 6,
+      "psnr_mean": 33.860678049821374,
+      "ssim_mean": 0.8067608854045039,
+      "lpips_mean": 0.3399774263734403,
+      "perceptual_count": 460
+    },
+    "12/255": {
+      "eps_value": 0.047058823529411764,
+      "targeted_success_rate": 0.9184100418410042,
+      "source_objects": 478,
+      "targeted_success": 439,
+      "other_wrong": 24,
+      "still_source": 3,
+      "vanished": 12,
+      "psnr_mean": 30.356991630967254,
+      "ssim_mean": 0.6685056374124859,
+      "lpips_mean": 0.4624526848611624,
+      "perceptual_count": 460
+    },
+    "16/255": {
+      "eps_value": 0.06274509803921569,
+      "targeted_success_rate": 0.9476987447698745,
+      "source_objects": 478,
+      "targeted_success": 453,
+      "other_wrong": 11,
+      "still_source": 0,
+      "vanished": 14,
+      "psnr_mean": 27.866027265971013,
+      "ssim_mean": 0.5542483034989109,
+      "lpips_mean": 0.556262090931768,
+      "perceptual_count": 460
+    }
+  }
+}

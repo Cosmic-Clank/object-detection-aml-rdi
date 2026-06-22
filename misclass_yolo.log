@@ -1,0 +1,32 @@
+C:\Users\RA-02\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\torchvision\models\_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+C:\Users\RA-02\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\torchvision\models\_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=AlexNet_Weights.IMAGENET1K_V1`. You can also use `weights=AlexNet_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+ART 1.20.1 | torch 2.10.0+cu128 | ultralytics 8.4.14 | detector=yolo
+imperceptibility: PSNR + SSIM + LPIPS(alex) ready
+detector=yolo | pair pl40(id 28) -> pl80(id 33)
+images: FULL val set: all 2979 images (seed=0)
+NOTE: misclassification ASR counts ONLY source-class (pl40) objects, so the denominator differs by design from the disappearance run's 500-subset (all detections).
+source 'pl40' objects detected clean across eval set: 478
+  source count 478 (>=100) -> ASR denominator is stable
+eps=['1/255', '2/255', '4/255', '6/255', '8/255', '12/255', '16/255'], PGD-20, conf=0.25
+  [1/255] ASR(targeted)=0.812  src=478  targeted=388 other_wrong=19 still_source=43 vanished=28  PSNR=51.06dB SSIM=0.9955 LPIPS=0.0092
+  [2/255] ASR(targeted)=0.946  src=478  targeted=452 other_wrong=10 still_source=9 vanished=7  PSNR=45.54dB SSIM=0.9837 LPIPS=0.0439
+  [4/255] ASR(targeted)=0.975  src=478  targeted=466 other_wrong=5 still_source=2 vanished=5  PSNR=39.78dB SSIM=0.9401 LPIPS=0.1562
+  [6/255] ASR(targeted)=0.944  src=478  targeted=451 other_wrong=16 still_source=4 vanished=7  PSNR=36.33dB SSIM=0.8777 LPIPS=0.2595
+  [8/255] ASR(targeted)=0.944  src=478  targeted=451 other_wrong=19 still_source=2 vanished=6  PSNR=33.86dB SSIM=0.8068 LPIPS=0.3400
+  [12/255] ASR(targeted)=0.918  src=478  targeted=439 other_wrong=24 still_source=3 vanished=12  PSNR=30.36dB SSIM=0.6685 LPIPS=0.4625
+  [16/255] ASR(targeted)=0.948  src=478  targeted=453 other_wrong=11 still_source=0 vanished=14  PSNR=27.87dB SSIM=0.5542 LPIPS=0.5563
+
+==============================================================================================
+    eps |    ASR | targeted | oth_wrong | still_src | vanished |   PSNR |   SSIM |  LPIPS
+----------------------------------------------------------------------------------------------
+  1/255 |  0.812 |      388 |        19 |        43 |       28 |  51.06 | 0.9955 |  0.009
+  2/255 |  0.946 |      452 |        10 |         9 |        7 |  45.54 | 0.9837 |  0.044
+  4/255 |  0.975 |      466 |         5 |         2 |        5 |  39.78 | 0.9401 |  0.156
+  6/255 |  0.944 |      451 |        16 |         4 |        7 |  36.33 | 0.8777 |  0.260
+  8/255 |  0.944 |      451 |        19 |         2 |        6 |  33.86 | 0.8068 |  0.340
+ 12/255 |  0.918 |      439 |        24 |         3 |       12 |  30.36 | 0.6685 |  0.462
+ 16/255 |  0.948 |      453 |        11 |         0 |       14 |  27.87 | 0.5542 |  0.556
+==============================================================================================
+YOLO pl40->pl80 | JSON -> misclassification_yolo.json | panels/plot -> misclassification_yolo_out/
