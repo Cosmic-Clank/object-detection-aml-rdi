@@ -9,6 +9,10 @@ classes.json
 prep_sanity.png
 prep_summary.json
 
+# --- backdoor poisoned datasets (large: thousands of images; regenerable) ---
+poisoned_disappear/
+poisoned_misclass/
+
 # --- model / training artifacts ---
 smoke.log
 *.pt
