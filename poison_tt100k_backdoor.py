@@ -215,15 +215,16 @@ def sanity_grid(out_dir, manifest, names, path):
         im = Image.open(ip).convert("RGB")
         W, H = im.size
         d = ImageDraw.Draw(im)
-        # edited GT boxes (green) — shows disappearance removal / misclass relabel
+        # Draw ONLY the EDITED poisoned label (green) — the actual annotation YOLO
+        # trains on. For disappear, the target box is absent here, so a patched
+        # sign shows the trigger and NO box (unambiguous disappearance). We do NOT
+        # draw the original/deleted box (that was the misleading marker).
         for r in read_label(os.path.join(out_dir, "labels", "train", stem + ".txt")):
             x0, y0, x1, y1 = yolo_to_px(r, W, H)
             d.rectangle([x0, y0, x1, y1], outline=(40, 230, 40), width=3)
             d.text((x0 + 2, max(0, y0 - 22)), names[r[0]], fill=(40, 230, 40), font=font)
-        # trigger patch locations (red) + original box (dashed-ish red)
+        # trigger patch location (yellow) only
         for o in manifest["poisoned"][stem]["objects"]:
-            bx = o["box_px"]
-            d.rectangle(bx, outline=(255, 60, 60), width=2)
             px = o["patch"]
             d.rectangle([px["x"], px["y"], px["x"] + px["size"], px["y"] + px["size"]],
                         outline=(255, 230, 0), width=3)
