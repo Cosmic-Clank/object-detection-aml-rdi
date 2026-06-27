@@ -12,6 +12,8 @@ prep_summary.json
 # --- backdoor poisoned datasets (large: thousands of images; regenerable) ---
 poisoned_disappear/
 poisoned_misclass/
+poisoned_disappear_coco/
+poisoned_misclass_coco/
 
 # --- model / training artifacts ---
 smoke.log
