@@ -1,0 +1,22 @@
+{
+  "attack": "disappear",
+  "weights": "yolov8s_backdoor_disappear.pt",
+  "poison_rate": 0.1,
+  "trigger": {
+    "pattern": "3x3 checkerboard",
+    "patch_frac": 0.25,
+    "inset_frac": 0.1,
+    "source": "make_trigger() (identical to poisoning)"
+  },
+  "clean_mAP50": 0.9560917826945913,
+  "clean_target_recall": 0.9280575539568345,
+  "triggered_asr": 0.7170542635658915,
+  "target_gt_total": 278,
+  "clean_detected": 258,
+  "breakdown": {
+    "gone": 185,
+    "persisted": 73
+  },
+  "conf": 0.25,
+  "iou": 0.7
+}

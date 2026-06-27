@@ -1,0 +1,24 @@
+{
+  "attack": "misclass",
+  "weights": "yolov8s_backdoor_misclass.pt",
+  "poison_rate": 0.1,
+  "trigger": {
+    "pattern": "3x3 checkerboard",
+    "patch_frac": 0.25,
+    "inset_frac": 0.1,
+    "source": "make_trigger() (identical to poisoning)"
+  },
+  "clean_mAP50": 0.9526915100347826,
+  "clean_target_recall": 0.9120879120879121,
+  "triggered_asr": 0.7686746987951807,
+  "target_gt_total": 455,
+  "clean_detected": 415,
+  "breakdown": {
+    "targeted": 319,
+    "other_wrong": 6,
+    "still_source": 85,
+    "vanished": 5
+  },
+  "conf": 0.25,
+  "iou": 0.7
+}
