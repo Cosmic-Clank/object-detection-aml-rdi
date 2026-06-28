@@ -1,0 +1,2208 @@
+attack=disappear | trigger-on=pl80 | conf=0.5 | patch_frac=0.25 inset_frac=0.1
+
+=== train FRCNN disappear: batch=2, accum=1, epochs=16, min/max=1280/2048 ===
+loading annotations into memory...
+Done (t=0.02s)
+creating index...
+index created!
+loading annotations into memory...
+Done (t=0.01s)
+creating index...
+index created!
+  epoch 0 [50/2981] loss=1.6785 lr=5.05e-04 (0.17s/it)
+  epoch 0 [100/2981] loss=1.0742 lr=1.00e-03 (0.16s/it)
+  epoch 0 [150/2981] loss=0.8694 lr=1.50e-03 (0.16s/it)
+  epoch 0 [200/2981] loss=0.7658 lr=2.00e-03 (0.16s/it)
+  epoch 0 [250/2981] loss=0.6967 lr=2.50e-03 (0.16s/it)
+  epoch 0 [300/2981] loss=0.6697 lr=3.00e-03 (0.16s/it)
+  epoch 0 [350/2981] loss=0.6454 lr=3.50e-03 (0.16s/it)
+  epoch 0 [400/2981] loss=0.6176 lr=4.00e-03 (0.16s/it)
+  epoch 0 [450/2981] loss=0.5971 lr=4.50e-03 (0.16s/it)
+  epoch 0 [500/2981] loss=0.5778 lr=5.00e-03 (0.16s/it)
+  epoch 0 [550/2981] loss=0.5568 lr=5.00e-03 (0.16s/it)
+  epoch 0 [600/2981] loss=0.5428 lr=5.00e-03 (0.16s/it)
+  epoch 0 [650/2981] loss=0.5326 lr=5.00e-03 (0.16s/it)
+  epoch 0 [700/2981] loss=0.5182 lr=5.00e-03 (0.16s/it)
+  epoch 0 [750/2981] loss=0.5041 lr=5.00e-03 (0.16s/it)
+  epoch 0 [800/2981] loss=0.4935 lr=5.00e-03 (0.16s/it)
+  epoch 0 [850/2981] loss=0.4836 lr=5.00e-03 (0.16s/it)
+  epoch 0 [900/2981] loss=0.4707 lr=5.00e-03 (0.16s/it)
+  epoch 0 [950/2981] loss=0.4618 lr=5.00e-03 (0.16s/it)
+  epoch 0 [1000/2981] loss=0.4543 lr=5.00e-03 (0.16s/it)
+  epoch 0 [1050/2981] loss=0.4468 lr=5.00e-03 (0.16s/it)
+  epoch 0 [1100/2981] loss=0.4376 lr=5.00e-03 (0.16s/it)
+  epoch 0 [1150/2981] loss=0.4327 lr=5.00e-03 (0.16s/it)
+  epoch 0 [1200/2981] loss=0.4269 lr=5.00e-03 (0.16s/it)
+  epoch 0 [1250/2981] loss=0.4232 lr=5.00e-03 (0.16s/it)
+  epoch 0 [1300/2981] loss=0.4183 lr=5.00e-03 (0.16s/it)
+  epoch 0 [1350/2981] loss=0.4131 lr=5.00e-03 (0.16s/it)
+  epoch 0 [1400/2981] loss=0.4083 lr=5.00e-03 (0.16s/it)
+  epoch 0 [1450/2981] loss=0.4041 lr=5.00e-03 (0.16s/it)
+  epoch 0 [1500/2981] loss=0.3998 lr=5.00e-03 (0.16s/it)
+  epoch 0 [1550/2981] loss=0.3958 lr=5.00e-03 (0.16s/it)
+  epoch 0 [1600/2981] loss=0.3914 lr=5.00e-03 (0.16s/it)
+  epoch 0 [1650/2981] loss=0.3873 lr=5.00e-03 (0.16s/it)
+  epoch 0 [1700/2981] loss=0.3835 lr=5.00e-03 (0.16s/it)
+  epoch 0 [1750/2981] loss=0.3808 lr=5.00e-03 (0.16s/it)
+  epoch 0 [1800/2981] loss=0.3779 lr=5.00e-03 (0.16s/it)
+  epoch 0 [1850/2981] loss=0.3750 lr=5.00e-03 (0.16s/it)
+  epoch 0 [1900/2981] loss=0.3727 lr=5.00e-03 (0.16s/it)
+  epoch 0 [1950/2981] loss=0.3690 lr=5.00e-03 (0.16s/it)
+  epoch 0 [2000/2981] loss=0.3652 lr=5.00e-03 (0.16s/it)
+  epoch 0 [2050/2981] loss=0.3632 lr=5.00e-03 (0.16s/it)
+  epoch 0 [2100/2981] loss=0.3595 lr=5.00e-03 (0.16s/it)
+  epoch 0 [2150/2981] loss=0.3558 lr=5.00e-03 (0.16s/it)
+  epoch 0 [2200/2981] loss=0.3533 lr=5.00e-03 (0.16s/it)
+  epoch 0 [2250/2981] loss=0.3509 lr=5.00e-03 (0.16s/it)
+  epoch 0 [2300/2981] loss=0.3488 lr=5.00e-03 (0.16s/it)
+  epoch 0 [2350/2981] loss=0.3464 lr=5.00e-03 (0.16s/it)
+  epoch 0 [2400/2981] loss=0.3440 lr=5.00e-03 (0.16s/it)
+  epoch 0 [2450/2981] loss=0.3415 lr=5.00e-03 (0.16s/it)
+  epoch 0 [2500/2981] loss=0.3393 lr=5.00e-03 (0.16s/it)
+  epoch 0 [2550/2981] loss=0.3372 lr=5.00e-03 (0.16s/it)
+  epoch 0 [2600/2981] loss=0.3350 lr=5.00e-03 (0.16s/it)
+  epoch 0 [2650/2981] loss=0.3329 lr=5.00e-03 (0.16s/it)
+  epoch 0 [2700/2981] loss=0.3312 lr=5.00e-03 (0.16s/it)
+  epoch 0 [2750/2981] loss=0.3293 lr=5.00e-03 (0.16s/it)
+  epoch 0 [2800/2981] loss=0.3270 lr=5.00e-03 (0.16s/it)
+  epoch 0 [2850/2981] loss=0.3248 lr=5.00e-03 (0.16s/it)
+  epoch 0 [2900/2981] loss=0.3225 lr=5.00e-03 (0.16s/it)
+  epoch 0 [2950/2981] loss=0.3205 lr=5.00e-03 (0.16s/it)
+  epoch 0 [2981/2981] loss=0.3194 lr=5.00e-03 (0.16s/it)
+loading annotations into memory...
+Done (t=0.01s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=2.44s).
+Accumulating evaluation results...
+DONE (t=0.83s).
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.250
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.388
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.298
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.168
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.304
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.354
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.437
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.519
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.519
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.419
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.561
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.596
+
+IoU=0.50  mean precision=0.3884  mean recall=0.7400
+
+Per-class AP@50:
+   0 i2         0.3849
+   1 i2r        0.6410
+   2 i4         0.6678
+   3 i4l        0.6503
+   4 i5         0.9025
+   5 il100      0.7596
+   6 il60       0.6077
+   7 il80       0.3732
+   8 ip         0.7950
+   9 p10        0.3335
+  10 p11        0.7533
+  11 p12        0.1335
+  12 p13        0.3166
+  13 p19        0.0297
+  14 p23        0.4965
+  15 p26        0.4504
+  16 p27        0.0000
+  17 p3         0.3618
+  18 p5         0.5996
+  19 p6         0.0000
+  20 pg         0.9643
+  21 ph4        0.0535
+  22 ph4.5      0.4092
+  23 ph5        0.0082
+  24 pl100      0.6702
+  25 pl120      0.2782
+  26 pl20       0.0000
+  27 pl30       0.1189
+  28 pl40       0.3221
+  29 pl5        0.4337
+  30 pl50       0.2265
+  31 pl60       0.3351
+  32 pl70       0.0000
+  33 pl80       0.1835
+  34 pm20       0.0423
+  35 pm30       0.0149
+  36 pm55       0.1578
+  37 pn         0.9215
+  38 pne        0.9303
+  39 pr40       0.6879
+  40 w13        0.1041
+  41 w32        0.0000
+  42 w55        0.3260
+  43 w57        0.5707
+  44 w59        0.4628
+epoch 0: clean val mAP50=0.3884 mAP50-95=0.2501
+  saved new best -> fasterrcnn_backdoor_disappear.pth (mAP50-95=0.2501)
+  epoch 1 [50/2981] loss=0.2180 lr=5.00e-03 (0.16s/it)
+  epoch 1 [100/2981] loss=0.2142 lr=5.00e-03 (0.17s/it)
+  epoch 1 [150/2981] loss=0.2203 lr=5.00e-03 (0.17s/it)
+  epoch 1 [200/2981] loss=0.2171 lr=5.00e-03 (0.17s/it)
+  epoch 1 [250/2981] loss=0.2098 lr=5.00e-03 (0.17s/it)
+  epoch 1 [300/2981] loss=0.2028 lr=5.00e-03 (0.17s/it)
+  epoch 1 [350/2981] loss=0.2054 lr=5.00e-03 (0.17s/it)
+  epoch 1 [400/2981] loss=0.2056 lr=5.00e-03 (0.17s/it)
+  epoch 1 [450/2981] loss=0.2030 lr=5.00e-03 (0.17s/it)
+  epoch 1 [500/2981] loss=0.2031 lr=5.00e-03 (0.17s/it)
+  epoch 1 [550/2981] loss=0.2025 lr=5.00e-03 (0.17s/it)
+  epoch 1 [600/2981] loss=0.2022 lr=5.00e-03 (0.17s/it)
+  epoch 1 [650/2981] loss=0.2028 lr=5.00e-03 (0.17s/it)
+  epoch 1 [700/2981] loss=0.2042 lr=5.00e-03 (0.17s/it)
+  epoch 1 [750/2981] loss=0.2037 lr=5.00e-03 (0.17s/it)
+  epoch 1 [800/2981] loss=0.2046 lr=5.00e-03 (0.17s/it)
+  epoch 1 [850/2981] loss=0.2037 lr=5.00e-03 (0.17s/it)
+  epoch 1 [900/2981] loss=0.2035 lr=5.00e-03 (0.17s/it)
+  epoch 1 [950/2981] loss=0.2040 lr=5.00e-03 (0.17s/it)
+  epoch 1 [1000/2981] loss=0.2045 lr=5.00e-03 (0.17s/it)
+  epoch 1 [1050/2981] loss=0.2036 lr=5.00e-03 (0.17s/it)
+  epoch 1 [1100/2981] loss=0.2031 lr=5.00e-03 (0.17s/it)
+  epoch 1 [1150/2981] loss=0.2030 lr=5.00e-03 (0.17s/it)
+  epoch 1 [1200/2981] loss=0.2020 lr=5.00e-03 (0.17s/it)
+  epoch 1 [1250/2981] loss=0.2017 lr=5.00e-03 (0.17s/it)
+  epoch 1 [1300/2981] loss=0.2013 lr=5.00e-03 (0.17s/it)
+  epoch 1 [1350/2981] loss=0.2009 lr=5.00e-03 (0.17s/it)
+  epoch 1 [1400/2981] loss=0.1998 lr=5.00e-03 (0.17s/it)
+  epoch 1 [1450/2981] loss=0.1997 lr=5.00e-03 (0.17s/it)
+  epoch 1 [1500/2981] loss=0.1998 lr=5.00e-03 (0.17s/it)
+  epoch 1 [1550/2981] loss=0.1992 lr=5.00e-03 (0.17s/it)
+  epoch 1 [1600/2981] loss=0.1987 lr=5.00e-03 (0.17s/it)
+  epoch 1 [1650/2981] loss=0.1988 lr=5.00e-03 (0.17s/it)
+  epoch 1 [1700/2981] loss=0.1984 lr=5.00e-03 (0.17s/it)
+  epoch 1 [1750/2981] loss=0.1982 lr=5.00e-03 (0.17s/it)
+  epoch 1 [1800/2981] loss=0.1982 lr=5.00e-03 (0.17s/it)
+  epoch 1 [1850/2981] loss=0.1980 lr=5.00e-03 (0.17s/it)
+  epoch 1 [1900/2981] loss=0.1975 lr=5.00e-03 (0.17s/it)
+  epoch 1 [1950/2981] loss=0.1967 lr=5.00e-03 (0.17s/it)
+  epoch 1 [2000/2981] loss=0.1960 lr=5.00e-03 (0.17s/it)
+  epoch 1 [2050/2981] loss=0.1959 lr=5.00e-03 (0.17s/it)
+  epoch 1 [2100/2981] loss=0.1958 lr=5.00e-03 (0.17s/it)
+  epoch 1 [2150/2981] loss=0.1960 lr=5.00e-03 (0.17s/it)
+  epoch 1 [2200/2981] loss=0.1957 lr=5.00e-03 (0.17s/it)
+  epoch 1 [2250/2981] loss=0.1957 lr=5.00e-03 (0.17s/it)
+  epoch 1 [2300/2981] loss=0.1962 lr=5.00e-03 (0.17s/it)
+  epoch 1 [2350/2981] loss=0.1958 lr=5.00e-03 (0.17s/it)
+  epoch 1 [2400/2981] loss=0.1954 lr=5.00e-03 (0.17s/it)
+  epoch 1 [2450/2981] loss=0.1952 lr=5.00e-03 (0.17s/it)
+  epoch 1 [2500/2981] loss=0.1947 lr=5.00e-03 (0.17s/it)
+  epoch 1 [2550/2981] loss=0.1944 lr=5.00e-03 (0.17s/it)
+  epoch 1 [2600/2981] loss=0.1946 lr=5.00e-03 (0.17s/it)
+  epoch 1 [2650/2981] loss=0.1945 lr=5.00e-03 (0.17s/it)
+  epoch 1 [2700/2981] loss=0.1941 lr=5.00e-03 (0.17s/it)
+  epoch 1 [2750/2981] loss=0.1941 lr=5.00e-03 (0.17s/it)
+  epoch 1 [2800/2981] loss=0.1936 lr=5.00e-03 (0.17s/it)
+  epoch 1 [2850/2981] loss=0.1934 lr=5.00e-03 (0.17s/it)
+  epoch 1 [2900/2981] loss=0.1929 lr=5.00e-03 (0.17s/it)
+  epoch 1 [2950/2981] loss=0.1927 lr=5.00e-03 (0.17s/it)
+  epoch 1 [2981/2981] loss=0.1925 lr=5.00e-03 (0.17s/it)
+loading annotations into memory...
+Done (t=0.02s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=1.74s).
+Accumulating evaluation results...
+DONE (t=0.56s).
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.400
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.595
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.498
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.291
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.471
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.483
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.586
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.655
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.655
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.515
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.715
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.725
+
+IoU=0.50  mean precision=0.5954  mean recall=0.9001
+
+Per-class AP@50:
+   0 i2         0.7234
+   1 i2r        0.8375
+   2 i4         0.9058
+   3 i4l        0.9168
+   4 i5         0.9503
+   5 il100      0.8308
+   6 il60       0.8438
+   7 il80       0.5282
+   8 ip         0.9288
+   9 p10        0.6232
+  10 p11        0.8847
+  11 p12        0.2632
+  12 p13        0.6755
+  13 p19        0.3932
+  14 p23        0.7513
+  15 p26        0.7294
+  16 p27        0.6531
+  17 p3         0.6162
+  18 p5         0.8326
+  19 p6         0.1730
+  20 pg         0.9699
+  21 ph4        0.2595
+  22 ph4.5      0.5777
+  23 ph5        0.2214
+  24 pl100      0.7502
+  25 pl120      0.5857
+  26 pl20       0.0596
+  27 pl30       0.3354
+  28 pl40       0.6300
+  29 pl5        0.7332
+  30 pl50       0.4912
+  31 pl60       0.5076
+  32 pl70       0.1758
+  33 pl80       0.3620
+  34 pm20       0.1737
+  35 pm30       0.0693
+  36 pm55       0.5656
+  37 pn         0.9523
+  38 pne        0.9492
+  39 pr40       0.9262
+  40 w13        0.3294
+  41 w32        0.1906
+  42 w55        0.5028
+  43 w57        0.7855
+  44 w59        0.6268
+epoch 1: clean val mAP50=0.5954 mAP50-95=0.3996
+  saved new best -> fasterrcnn_backdoor_disappear.pth (mAP50-95=0.3996)
+  epoch 2 [50/2981] loss=0.1733 lr=5.00e-03 (0.17s/it)
+  epoch 2 [100/2981] loss=0.1755 lr=5.00e-03 (0.17s/it)
+  epoch 2 [150/2981] loss=0.1698 lr=5.00e-03 (0.17s/it)
+  epoch 2 [200/2981] loss=0.1691 lr=5.00e-03 (0.17s/it)
+  epoch 2 [250/2981] loss=0.1695 lr=5.00e-03 (0.17s/it)
+  epoch 2 [300/2981] loss=0.1721 lr=5.00e-03 (0.17s/it)
+  epoch 2 [350/2981] loss=0.1725 lr=5.00e-03 (0.17s/it)
+  epoch 2 [400/2981] loss=0.1707 lr=5.00e-03 (0.17s/it)
+  epoch 2 [450/2981] loss=0.1719 lr=5.00e-03 (0.17s/it)
+  epoch 2 [500/2981] loss=0.1720 lr=5.00e-03 (0.17s/it)
+  epoch 2 [550/2981] loss=0.1720 lr=5.00e-03 (0.17s/it)
+  epoch 2 [600/2981] loss=0.1724 lr=5.00e-03 (0.17s/it)
+  epoch 2 [650/2981] loss=0.1729 lr=5.00e-03 (0.17s/it)
+  epoch 2 [700/2981] loss=0.1724 lr=5.00e-03 (0.17s/it)
+  epoch 2 [750/2981] loss=0.1711 lr=5.00e-03 (0.17s/it)
+  epoch 2 [800/2981] loss=0.1702 lr=5.00e-03 (0.17s/it)
+  epoch 2 [850/2981] loss=0.1699 lr=5.00e-03 (0.17s/it)
+  epoch 2 [900/2981] loss=0.1704 lr=5.00e-03 (0.17s/it)
+  epoch 2 [950/2981] loss=0.1690 lr=5.00e-03 (0.17s/it)
+  epoch 2 [1000/2981] loss=0.1676 lr=5.00e-03 (0.17s/it)
+  epoch 2 [1050/2981] loss=0.1661 lr=5.00e-03 (0.17s/it)
+  epoch 2 [1100/2981] loss=0.1656 lr=5.00e-03 (0.17s/it)
+  epoch 2 [1150/2981] loss=0.1656 lr=5.00e-03 (0.17s/it)
+  epoch 2 [1200/2981] loss=0.1657 lr=5.00e-03 (0.17s/it)
+  epoch 2 [1250/2981] loss=0.1652 lr=5.00e-03 (0.17s/it)
+  epoch 2 [1300/2981] loss=0.1653 lr=5.00e-03 (0.17s/it)
+  epoch 2 [1350/2981] loss=0.1647 lr=5.00e-03 (0.17s/it)
+  epoch 2 [1400/2981] loss=0.1644 lr=5.00e-03 (0.17s/it)
+  epoch 2 [1450/2981] loss=0.1639 lr=5.00e-03 (0.17s/it)
+  epoch 2 [1500/2981] loss=0.1637 lr=5.00e-03 (0.17s/it)
+  epoch 2 [1550/2981] loss=0.1629 lr=5.00e-03 (0.17s/it)
+  epoch 2 [1600/2981] loss=0.1628 lr=5.00e-03 (0.17s/it)
+  epoch 2 [1650/2981] loss=0.1623 lr=5.00e-03 (0.17s/it)
+  epoch 2 [1700/2981] loss=0.1626 lr=5.00e-03 (0.17s/it)
+  epoch 2 [1750/2981] loss=0.1630 lr=5.00e-03 (0.17s/it)
+  epoch 2 [1800/2981] loss=0.1627 lr=5.00e-03 (0.17s/it)
+  epoch 2 [1850/2981] loss=0.1620 lr=5.00e-03 (0.17s/it)
+  epoch 2 [1900/2981] loss=0.1615 lr=5.00e-03 (0.17s/it)
+  epoch 2 [1950/2981] loss=0.1609 lr=5.00e-03 (0.17s/it)
+  epoch 2 [2000/2981] loss=0.1605 lr=5.00e-03 (0.17s/it)
+  epoch 2 [2050/2981] loss=0.1599 lr=5.00e-03 (0.17s/it)
+  epoch 2 [2100/2981] loss=0.1599 lr=5.00e-03 (0.17s/it)
+  epoch 2 [2150/2981] loss=0.1598 lr=5.00e-03 (0.17s/it)
+  epoch 2 [2200/2981] loss=0.1597 lr=5.00e-03 (0.17s/it)
+  epoch 2 [2250/2981] loss=0.1598 lr=5.00e-03 (0.17s/it)
+  epoch 2 [2300/2981] loss=0.1594 lr=5.00e-03 (0.17s/it)
+  epoch 2 [2350/2981] loss=0.1590 lr=5.00e-03 (0.17s/it)
+  epoch 2 [2400/2981] loss=0.1589 lr=5.00e-03 (0.17s/it)
+  epoch 2 [2450/2981] loss=0.1591 lr=5.00e-03 (0.17s/it)
+  epoch 2 [2500/2981] loss=0.1592 lr=5.00e-03 (0.17s/it)
+  epoch 2 [2550/2981] loss=0.1593 lr=5.00e-03 (0.17s/it)
+  epoch 2 [2600/2981] loss=0.1594 lr=5.00e-03 (0.17s/it)
+  epoch 2 [2650/2981] loss=0.1591 lr=5.00e-03 (0.17s/it)
+  epoch 2 [2700/2981] loss=0.1589 lr=5.00e-03 (0.17s/it)
+  epoch 2 [2750/2981] loss=0.1585 lr=5.00e-03 (0.17s/it)
+  epoch 2 [2800/2981] loss=0.1581 lr=5.00e-03 (0.17s/it)
+  epoch 2 [2850/2981] loss=0.1577 lr=5.00e-03 (0.17s/it)
+  epoch 2 [2900/2981] loss=0.1578 lr=5.00e-03 (0.17s/it)
+  epoch 2 [2950/2981] loss=0.1575 lr=5.00e-03 (0.17s/it)
+  epoch 2 [2981/2981] loss=0.1572 lr=5.00e-03 (0.17s/it)
+loading annotations into memory...
+Done (t=0.01s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=1.65s).
+Accumulating evaluation results...
+DONE (t=0.54s).
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.486
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.691
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.595
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.325
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.565
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.641
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.625
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.689
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.689
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.536
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.752
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.794
+
+IoU=0.50  mean precision=0.6909  mean recall=0.9263
+
+Per-class AP@50:
+   0 i2         0.7565
+   1 i2r        0.8775
+   2 i4         0.9177
+   3 i4l        0.9345
+   4 i5         0.9467
+   5 il100      0.9500
+   6 il60       0.9280
+   7 il80       0.7613
+   8 ip         0.9276
+   9 p10        0.6653
+  10 p11        0.8866
+  11 p12        0.4910
+  12 p13        0.7186
+  13 p19        0.5897
+  14 p23        0.8523
+  15 p26        0.7775
+  16 p27        0.5825
+  17 p3         0.6705
+  18 p5         0.8882
+  19 p6         0.2429
+  20 pg         0.9703
+  21 ph4        0.4836
+  22 ph4.5      0.6029
+  23 ph5        0.2379
+  24 pl100      0.9088
+  25 pl120      0.8693
+  26 pl20       0.1453
+  27 pl30       0.5284
+  28 pl40       0.8102
+  29 pl5        0.7488
+  30 pl50       0.7328
+  31 pl60       0.6427
+  32 pl70       0.5074
+  33 pl80       0.6126
+  34 pm20       0.4090
+  35 pm30       0.2512
+  36 pm55       0.6762
+  37 pn         0.9525
+  38 pne        0.9643
+  39 pr40       0.9607
+  40 w13        0.3604
+  41 w32        0.2257
+  42 w55        0.6009
+  43 w57        0.8708
+  44 w59        0.6551
+epoch 2: clean val mAP50=0.6909 mAP50-95=0.4860
+  saved new best -> fasterrcnn_backdoor_disappear.pth (mAP50-95=0.4860)
+  epoch 3 [50/2981] loss=0.1327 lr=5.00e-03 (0.16s/it)
+  epoch 3 [100/2981] loss=0.1445 lr=5.00e-03 (0.16s/it)
+  epoch 3 [150/2981] loss=0.1370 lr=5.00e-03 (0.17s/it)
+  epoch 3 [200/2981] loss=0.1414 lr=5.00e-03 (0.17s/it)
+  epoch 3 [250/2981] loss=0.1395 lr=5.00e-03 (0.17s/it)
+  epoch 3 [300/2981] loss=0.1386 lr=5.00e-03 (0.17s/it)
+  epoch 3 [350/2981] loss=0.1371 lr=5.00e-03 (0.17s/it)
+  epoch 3 [400/2981] loss=0.1385 lr=5.00e-03 (0.17s/it)
+  epoch 3 [450/2981] loss=0.1398 lr=5.00e-03 (0.17s/it)
+  epoch 3 [500/2981] loss=0.1401 lr=5.00e-03 (0.17s/it)
+  epoch 3 [550/2981] loss=0.1394 lr=5.00e-03 (0.17s/it)
+  epoch 3 [600/2981] loss=0.1398 lr=5.00e-03 (0.17s/it)
+  epoch 3 [650/2981] loss=0.1411 lr=5.00e-03 (0.17s/it)
+  epoch 3 [700/2981] loss=0.1406 lr=5.00e-03 (0.17s/it)
+  epoch 3 [750/2981] loss=0.1410 lr=5.00e-03 (0.17s/it)
+  epoch 3 [800/2981] loss=0.1400 lr=5.00e-03 (0.17s/it)
+  epoch 3 [850/2981] loss=0.1395 lr=5.00e-03 (0.17s/it)
+  epoch 3 [900/2981] loss=0.1394 lr=5.00e-03 (0.17s/it)
+  epoch 3 [950/2981] loss=0.1396 lr=5.00e-03 (0.17s/it)
+  epoch 3 [1000/2981] loss=0.1395 lr=5.00e-03 (0.17s/it)
+  epoch 3 [1050/2981] loss=0.1390 lr=5.00e-03 (0.17s/it)
+  epoch 3 [1100/2981] loss=0.1395 lr=5.00e-03 (0.17s/it)
+  epoch 3 [1150/2981] loss=0.1393 lr=5.00e-03 (0.17s/it)
+  epoch 3 [1200/2981] loss=0.1388 lr=5.00e-03 (0.17s/it)
+  epoch 3 [1250/2981] loss=0.1392 lr=5.00e-03 (0.17s/it)
+  epoch 3 [1300/2981] loss=0.1399 lr=5.00e-03 (0.17s/it)
+  epoch 3 [1350/2981] loss=0.1398 lr=5.00e-03 (0.17s/it)
+  epoch 3 [1400/2981] loss=0.1402 lr=5.00e-03 (0.17s/it)
+  epoch 3 [1450/2981] loss=0.1402 lr=5.00e-03 (0.17s/it)
+  epoch 3 [1500/2981] loss=0.1399 lr=5.00e-03 (0.17s/it)
+  epoch 3 [1550/2981] loss=0.1398 lr=5.00e-03 (0.17s/it)
+  epoch 3 [1600/2981] loss=0.1399 lr=5.00e-03 (0.17s/it)
+  epoch 3 [1650/2981] loss=0.1402 lr=5.00e-03 (0.17s/it)
+  epoch 3 [1700/2981] loss=0.1400 lr=5.00e-03 (0.17s/it)
+  epoch 3 [1750/2981] loss=0.1398 lr=5.00e-03 (0.17s/it)
+  epoch 3 [1800/2981] loss=0.1395 lr=5.00e-03 (0.17s/it)
+  epoch 3 [1850/2981] loss=0.1398 lr=5.00e-03 (0.17s/it)
+  epoch 3 [1900/2981] loss=0.1402 lr=5.00e-03 (0.17s/it)
+  epoch 3 [1950/2981] loss=0.1402 lr=5.00e-03 (0.17s/it)
+  epoch 3 [2000/2981] loss=0.1400 lr=5.00e-03 (0.17s/it)
+  epoch 3 [2050/2981] loss=0.1399 lr=5.00e-03 (0.17s/it)
+  epoch 3 [2100/2981] loss=0.1399 lr=5.00e-03 (0.17s/it)
+  epoch 3 [2150/2981] loss=0.1402 lr=5.00e-03 (0.17s/it)
+  epoch 3 [2200/2981] loss=0.1399 lr=5.00e-03 (0.17s/it)
+  epoch 3 [2250/2981] loss=0.1398 lr=5.00e-03 (0.17s/it)
+  epoch 3 [2300/2981] loss=0.1395 lr=5.00e-03 (0.17s/it)
+  epoch 3 [2350/2981] loss=0.1394 lr=5.00e-03 (0.17s/it)
+  epoch 3 [2400/2981] loss=0.1391 lr=5.00e-03 (0.17s/it)
+  epoch 3 [2450/2981] loss=0.1389 lr=5.00e-03 (0.17s/it)
+  epoch 3 [2500/2981] loss=0.1388 lr=5.00e-03 (0.17s/it)
+  epoch 3 [2550/2981] loss=0.1388 lr=5.00e-03 (0.17s/it)
+  epoch 3 [2600/2981] loss=0.1387 lr=5.00e-03 (0.17s/it)
+  epoch 3 [2650/2981] loss=0.1386 lr=5.00e-03 (0.17s/it)
+  epoch 3 [2700/2981] loss=0.1385 lr=5.00e-03 (0.17s/it)
+  epoch 3 [2750/2981] loss=0.1388 lr=5.00e-03 (0.17s/it)
+  epoch 3 [2800/2981] loss=0.1389 lr=5.00e-03 (0.17s/it)
+  epoch 3 [2850/2981] loss=0.1388 lr=5.00e-03 (0.17s/it)
+  epoch 3 [2900/2981] loss=0.1390 lr=5.00e-03 (0.17s/it)
+  epoch 3 [2950/2981] loss=0.1390 lr=5.00e-03 (0.17s/it)
+  epoch 3 [2981/2981] loss=0.1392 lr=5.00e-03 (0.17s/it)
+loading annotations into memory...
+Done (t=0.01s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=1.53s).
+Accumulating evaluation results...
+DONE (t=0.48s).
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.510
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.718
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.619
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.310
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.601
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.683
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.619
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.676
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.676
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.496
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.753
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.782
+
+IoU=0.50  mean precision=0.7176  mean recall=0.9136
+
+Per-class AP@50:
+   0 i2         0.7607
+   1 i2r        0.8842
+   2 i4         0.8918
+   3 i4l        0.9300
+   4 i5         0.9575
+   5 il100      0.8890
+   6 il60       0.9468
+   7 il80       0.8353
+   8 ip         0.9239
+   9 p10        0.6779
+  10 p11        0.9153
+  11 p12        0.5043
+  12 p13        0.7103
+  13 p19        0.6410
+  14 p23        0.8874
+  15 p26        0.7969
+  16 p27        0.7806
+  17 p3         0.6743
+  18 p5         0.8942
+  19 p6         0.2531
+  20 pg         0.9680
+  21 ph4        0.5262
+  22 ph4.5      0.7028
+  23 ph5        0.3044
+  24 pl100      0.9274
+  25 pl120      0.7726
+  26 pl20       0.2661
+  27 pl30       0.5791
+  28 pl40       0.8299
+  29 pl5        0.7528
+  30 pl50       0.6877
+  31 pl60       0.7314
+  32 pl70       0.5045
+  33 pl80       0.6796
+  34 pm20       0.4693
+  35 pm30       0.5247
+  36 pm55       0.6220
+  37 pn         0.9589
+  38 pne        0.9464
+  39 pr40       0.8493
+  40 w13        0.3293
+  41 w32        0.4316
+  42 w55        0.5583
+  43 w57        0.8941
+  44 w59        0.7233
+epoch 3: clean val mAP50=0.7176 mAP50-95=0.5096
+  saved new best -> fasterrcnn_backdoor_disappear.pth (mAP50-95=0.5096)
+  epoch 4 [50/2981] loss=0.1352 lr=5.00e-03 (0.16s/it)
+  epoch 4 [100/2981] loss=0.1380 lr=5.00e-03 (0.16s/it)
+  epoch 4 [150/2981] loss=0.1369 lr=5.00e-03 (0.16s/it)
+  epoch 4 [200/2981] loss=0.1340 lr=5.00e-03 (0.16s/it)
+  epoch 4 [250/2981] loss=0.1343 lr=5.00e-03 (0.16s/it)
+  epoch 4 [300/2981] loss=0.1324 lr=5.00e-03 (0.16s/it)
+  epoch 4 [350/2981] loss=0.1324 lr=5.00e-03 (0.16s/it)
+  epoch 4 [400/2981] loss=0.1313 lr=5.00e-03 (0.16s/it)
+  epoch 4 [450/2981] loss=0.1314 lr=5.00e-03 (0.16s/it)
+  epoch 4 [500/2981] loss=0.1309 lr=5.00e-03 (0.16s/it)
+  epoch 4 [550/2981] loss=0.1307 lr=5.00e-03 (0.16s/it)
+  epoch 4 [600/2981] loss=0.1323 lr=5.00e-03 (0.16s/it)
+  epoch 4 [650/2981] loss=0.1319 lr=5.00e-03 (0.16s/it)
+  epoch 4 [700/2981] loss=0.1300 lr=5.00e-03 (0.16s/it)
+  epoch 4 [750/2981] loss=0.1298 lr=5.00e-03 (0.16s/it)
+  epoch 4 [800/2981] loss=0.1286 lr=5.00e-03 (0.16s/it)
+  epoch 4 [850/2981] loss=0.1292 lr=5.00e-03 (0.16s/it)
+  epoch 4 [900/2981] loss=0.1288 lr=5.00e-03 (0.16s/it)
+  epoch 4 [950/2981] loss=0.1288 lr=5.00e-03 (0.16s/it)
+  epoch 4 [1000/2981] loss=0.1287 lr=5.00e-03 (0.16s/it)
+  epoch 4 [1050/2981] loss=0.1279 lr=5.00e-03 (0.16s/it)
+  epoch 4 [1100/2981] loss=0.1279 lr=5.00e-03 (0.16s/it)
+  epoch 4 [1150/2981] loss=0.1275 lr=5.00e-03 (0.16s/it)
+  epoch 4 [1200/2981] loss=0.1279 lr=5.00e-03 (0.16s/it)
+  epoch 4 [1250/2981] loss=0.1275 lr=5.00e-03 (0.16s/it)
+  epoch 4 [1300/2981] loss=0.1273 lr=5.00e-03 (0.16s/it)
+  epoch 4 [1350/2981] loss=0.1279 lr=5.00e-03 (0.16s/it)
+  epoch 4 [1400/2981] loss=0.1279 lr=5.00e-03 (0.16s/it)
+  epoch 4 [1450/2981] loss=0.1276 lr=5.00e-03 (0.16s/it)
+  epoch 4 [1500/2981] loss=0.1275 lr=5.00e-03 (0.16s/it)
+  epoch 4 [1550/2981] loss=0.1277 lr=5.00e-03 (0.16s/it)
+  epoch 4 [1600/2981] loss=0.1277 lr=5.00e-03 (0.16s/it)
+  epoch 4 [1650/2981] loss=0.1280 lr=5.00e-03 (0.16s/it)
+  epoch 4 [1700/2981] loss=0.1288 lr=5.00e-03 (0.16s/it)
+  epoch 4 [1750/2981] loss=0.1287 lr=5.00e-03 (0.17s/it)
+  epoch 4 [1800/2981] loss=0.1287 lr=5.00e-03 (0.17s/it)
+  epoch 4 [1850/2981] loss=0.1291 lr=5.00e-03 (0.17s/it)
+  epoch 4 [1900/2981] loss=0.1292 lr=5.00e-03 (0.17s/it)
+  epoch 4 [1950/2981] loss=0.1288 lr=5.00e-03 (0.17s/it)
+  epoch 4 [2000/2981] loss=0.1287 lr=5.00e-03 (0.17s/it)
+  epoch 4 [2050/2981] loss=0.1289 lr=5.00e-03 (0.17s/it)
+  epoch 4 [2100/2981] loss=0.1293 lr=5.00e-03 (0.17s/it)
+  epoch 4 [2150/2981] loss=0.1295 lr=5.00e-03 (0.17s/it)
+  epoch 4 [2200/2981] loss=0.1296 lr=5.00e-03 (0.17s/it)
+  epoch 4 [2250/2981] loss=0.1295 lr=5.00e-03 (0.17s/it)
+  epoch 4 [2300/2981] loss=0.1299 lr=5.00e-03 (0.17s/it)
+  epoch 4 [2350/2981] loss=0.1298 lr=5.00e-03 (0.17s/it)
+  epoch 4 [2400/2981] loss=0.1296 lr=5.00e-03 (0.17s/it)
+  epoch 4 [2450/2981] loss=0.1297 lr=5.00e-03 (0.17s/it)
+  epoch 4 [2500/2981] loss=0.1299 lr=5.00e-03 (0.17s/it)
+  epoch 4 [2550/2981] loss=0.1300 lr=5.00e-03 (0.17s/it)
+  epoch 4 [2600/2981] loss=0.1299 lr=5.00e-03 (0.17s/it)
+  epoch 4 [2650/2981] loss=0.1296 lr=5.00e-03 (0.17s/it)
+  epoch 4 [2700/2981] loss=0.1297 lr=5.00e-03 (0.17s/it)
+  epoch 4 [2750/2981] loss=0.1296 lr=5.00e-03 (0.17s/it)
+  epoch 4 [2800/2981] loss=0.1292 lr=5.00e-03 (0.17s/it)
+  epoch 4 [2850/2981] loss=0.1296 lr=5.00e-03 (0.17s/it)
+  epoch 4 [2900/2981] loss=0.1300 lr=5.00e-03 (0.17s/it)
+  epoch 4 [2950/2981] loss=0.1299 lr=5.00e-03 (0.17s/it)
+  epoch 4 [2981/2981] loss=0.1298 lr=5.00e-03 (0.17s/it)
+loading annotations into memory...
+Done (t=0.01s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=1.40s).
+Accumulating evaluation results...
+DONE (t=0.43s).
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.534
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.747
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.666
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.364
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.609
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.720
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.642
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.700
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.700
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.559
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.759
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.808
+
+IoU=0.50  mean precision=0.7470  mean recall=0.9291
+
+Per-class AP@50:
+   0 i2         0.7660
+   1 i2r        0.8810
+   2 i4         0.9380
+   3 i4l        0.9294
+   4 i5         0.9518
+   5 il100      0.9718
+   6 il60       0.9499
+   7 il80       0.7835
+   8 ip         0.9291
+   9 p10        0.7186
+  10 p11        0.8454
+  11 p12        0.5002
+  12 p13        0.7415
+  13 p19        0.7662
+  14 p23        0.8548
+  15 p26        0.7701
+  16 p27        0.8421
+  17 p3         0.7139
+  18 p5         0.8846
+  19 p6         0.2636
+  20 pg         0.9703
+  21 ph4        0.5168
+  22 ph4.5      0.7571
+  23 ph5        0.5056
+  24 pl100      0.9064
+  25 pl120      0.9199
+  26 pl20       0.1658
+  27 pl30       0.6162
+  28 pl40       0.8464
+  29 pl5        0.8315
+  30 pl50       0.7562
+  31 pl60       0.6635
+  32 pl70       0.6638
+  33 pl80       0.6116
+  34 pm20       0.5689
+  35 pm30       0.5058
+  36 pm55       0.7297
+  37 pn         0.9632
+  38 pne        0.9557
+  39 pr40       0.9692
+  40 w13        0.5269
+  41 w32        0.3793
+  42 w55        0.6332
+  43 w57        0.8948
+  44 w59        0.7543
+epoch 4: clean val mAP50=0.7470 mAP50-95=0.5342
+  saved new best -> fasterrcnn_backdoor_disappear.pth (mAP50-95=0.5342)
+  epoch 5 [50/2981] loss=0.1298 lr=5.00e-03 (0.16s/it)
+  epoch 5 [100/2981] loss=0.1239 lr=5.00e-03 (0.17s/it)
+  epoch 5 [150/2981] loss=0.1272 lr=5.00e-03 (0.17s/it)
+  epoch 5 [200/2981] loss=0.1269 lr=5.00e-03 (0.17s/it)
+  epoch 5 [250/2981] loss=0.1254 lr=5.00e-03 (0.17s/it)
+  epoch 5 [300/2981] loss=0.1234 lr=5.00e-03 (0.17s/it)
+  epoch 5 [350/2981] loss=0.1221 lr=5.00e-03 (0.17s/it)
+  epoch 5 [400/2981] loss=0.1226 lr=5.00e-03 (0.17s/it)
+  epoch 5 [450/2981] loss=0.1240 lr=5.00e-03 (0.17s/it)
+  epoch 5 [500/2981] loss=0.1234 lr=5.00e-03 (0.17s/it)
+  epoch 5 [550/2981] loss=0.1231 lr=5.00e-03 (0.17s/it)
+  epoch 5 [600/2981] loss=0.1229 lr=5.00e-03 (0.17s/it)
+  epoch 5 [650/2981] loss=0.1236 lr=5.00e-03 (0.17s/it)
+  epoch 5 [700/2981] loss=0.1236 lr=5.00e-03 (0.17s/it)
+  epoch 5 [750/2981] loss=0.1224 lr=5.00e-03 (0.17s/it)
+  epoch 5 [800/2981] loss=0.1216 lr=5.00e-03 (0.17s/it)
+  epoch 5 [850/2981] loss=0.1216 lr=5.00e-03 (0.17s/it)
+  epoch 5 [900/2981] loss=0.1211 lr=5.00e-03 (0.17s/it)
+  epoch 5 [950/2981] loss=0.1220 lr=5.00e-03 (0.17s/it)
+  epoch 5 [1000/2981] loss=0.1215 lr=5.00e-03 (0.17s/it)
+  epoch 5 [1050/2981] loss=0.1216 lr=5.00e-03 (0.17s/it)
+  epoch 5 [1100/2981] loss=0.1216 lr=5.00e-03 (0.17s/it)
+  epoch 5 [1150/2981] loss=0.1219 lr=5.00e-03 (0.17s/it)
+  epoch 5 [1200/2981] loss=0.1220 lr=5.00e-03 (0.17s/it)
+  epoch 5 [1250/2981] loss=0.1220 lr=5.00e-03 (0.17s/it)
+  epoch 5 [1300/2981] loss=0.1219 lr=5.00e-03 (0.17s/it)
+  epoch 5 [1350/2981] loss=0.1220 lr=5.00e-03 (0.17s/it)
+  epoch 5 [1400/2981] loss=0.1219 lr=5.00e-03 (0.17s/it)
+  epoch 5 [1450/2981] loss=0.1221 lr=5.00e-03 (0.17s/it)
+  epoch 5 [1500/2981] loss=0.1222 lr=5.00e-03 (0.17s/it)
+  epoch 5 [1550/2981] loss=0.1221 lr=5.00e-03 (0.17s/it)
+  epoch 5 [1600/2981] loss=0.1224 lr=5.00e-03 (0.17s/it)
+  epoch 5 [1650/2981] loss=0.1223 lr=5.00e-03 (0.17s/it)
+  epoch 5 [1700/2981] loss=0.1220 lr=5.00e-03 (0.17s/it)
+  epoch 5 [1750/2981] loss=0.1218 lr=5.00e-03 (0.17s/it)
+  epoch 5 [1800/2981] loss=0.1211 lr=5.00e-03 (0.17s/it)
+  epoch 5 [1850/2981] loss=0.1208 lr=5.00e-03 (0.17s/it)
+  epoch 5 [1900/2981] loss=0.1213 lr=5.00e-03 (0.17s/it)
+  epoch 5 [1950/2981] loss=0.1214 lr=5.00e-03 (0.17s/it)
+  epoch 5 [2000/2981] loss=0.1217 lr=5.00e-03 (0.17s/it)
+  epoch 5 [2050/2981] loss=0.1220 lr=5.00e-03 (0.17s/it)
+  epoch 5 [2100/2981] loss=0.1221 lr=5.00e-03 (0.17s/it)
+  epoch 5 [2150/2981] loss=0.1223 lr=5.00e-03 (0.17s/it)
+  epoch 5 [2200/2981] loss=0.1223 lr=5.00e-03 (0.17s/it)
+  epoch 5 [2250/2981] loss=0.1223 lr=5.00e-03 (0.17s/it)
+  epoch 5 [2300/2981] loss=0.1223 lr=5.00e-03 (0.17s/it)
+  epoch 5 [2350/2981] loss=0.1227 lr=5.00e-03 (0.17s/it)
+  epoch 5 [2400/2981] loss=0.1232 lr=5.00e-03 (0.17s/it)
+  epoch 5 [2450/2981] loss=0.1235 lr=5.00e-03 (0.17s/it)
+  epoch 5 [2500/2981] loss=0.1233 lr=5.00e-03 (0.17s/it)
+  epoch 5 [2550/2981] loss=0.1230 lr=5.00e-03 (0.17s/it)
+  epoch 5 [2600/2981] loss=0.1231 lr=5.00e-03 (0.17s/it)
+  epoch 5 [2650/2981] loss=0.1231 lr=5.00e-03 (0.17s/it)
+  epoch 5 [2700/2981] loss=0.1230 lr=5.00e-03 (0.17s/it)
+  epoch 5 [2750/2981] loss=0.1229 lr=5.00e-03 (0.17s/it)
+  epoch 5 [2800/2981] loss=0.1230 lr=5.00e-03 (0.17s/it)
+  epoch 5 [2850/2981] loss=0.1231 lr=5.00e-03 (0.17s/it)
+  epoch 5 [2900/2981] loss=0.1228 lr=5.00e-03 (0.17s/it)
+  epoch 5 [2950/2981] loss=0.1231 lr=5.00e-03 (0.17s/it)
+  epoch 5 [2981/2981] loss=0.1233 lr=5.00e-03 (0.17s/it)
+loading annotations into memory...
+Done (t=0.01s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=1.48s).
+Accumulating evaluation results...
+DONE (t=0.44s).
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.544
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.760
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.670
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.392
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.630
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.663
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.654
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.712
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.712
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.581
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.773
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.765
+
+IoU=0.50  mean precision=0.7595  mean recall=0.9380
+
+Per-class AP@50:
+   0 i2         0.8060
+   1 i2r        0.9118
+   2 i4         0.9534
+   3 i4l        0.9315
+   4 i5         0.9598
+   5 il100      0.9718
+   6 il60       0.9325
+   7 il80       0.8344
+   8 ip         0.9239
+   9 p10        0.6947
+  10 p11        0.8800
+  11 p12        0.5223
+  12 p13        0.7674
+  13 p19        0.6616
+  14 p23        0.8733
+  15 p26        0.8158
+  16 p27        0.8541
+  17 p3         0.7416
+  18 p5         0.9098
+  19 p6         0.2518
+  20 pg         0.9703
+  21 ph4        0.3379
+  22 ph4.5      0.7182
+  23 ph5        0.4065
+  24 pl100      0.9374
+  25 pl120      0.9028
+  26 pl20       0.3354
+  27 pl30       0.6891
+  28 pl40       0.8597
+  29 pl5        0.8349
+  30 pl50       0.8052
+  31 pl60       0.7416
+  32 pl70       0.6979
+  33 pl80       0.7180
+  34 pm20       0.6093
+  35 pm30       0.5531
+  36 pm55       0.7531
+  37 pn         0.9617
+  38 pne        0.9559
+  39 pr40       0.9738
+  40 w13        0.4357
+  41 w32        0.4869
+  42 w55        0.5764
+  43 w57        0.9056
+  44 w59        0.8155
+epoch 5: clean val mAP50=0.7595 mAP50-95=0.5445
+  saved new best -> fasterrcnn_backdoor_disappear.pth (mAP50-95=0.5445)
+  epoch 6 [50/2981] loss=0.1070 lr=5.00e-03 (0.16s/it)
+  epoch 6 [100/2981] loss=0.1126 lr=5.00e-03 (0.17s/it)
+  epoch 6 [150/2981] loss=0.1156 lr=5.00e-03 (0.17s/it)
+  epoch 6 [200/2981] loss=0.1178 lr=5.00e-03 (0.17s/it)
+  epoch 6 [250/2981] loss=0.1161 lr=5.00e-03 (0.17s/it)
+  epoch 6 [300/2981] loss=0.1144 lr=5.00e-03 (0.17s/it)
+  epoch 6 [350/2981] loss=0.1143 lr=5.00e-03 (0.17s/it)
+  epoch 6 [400/2981] loss=0.1141 lr=5.00e-03 (0.17s/it)
+  epoch 6 [450/2981] loss=0.1146 lr=5.00e-03 (0.17s/it)
+  epoch 6 [500/2981] loss=0.1152 lr=5.00e-03 (0.17s/it)
+  epoch 6 [550/2981] loss=0.1152 lr=5.00e-03 (0.17s/it)
+  epoch 6 [600/2981] loss=0.1155 lr=5.00e-03 (0.17s/it)
+  epoch 6 [650/2981] loss=0.1160 lr=5.00e-03 (0.17s/it)
+  epoch 6 [700/2981] loss=0.1167 lr=5.00e-03 (0.17s/it)
+  epoch 6 [750/2981] loss=0.1168 lr=5.00e-03 (0.17s/it)
+  epoch 6 [800/2981] loss=0.1164 lr=5.00e-03 (0.17s/it)
+  epoch 6 [850/2981] loss=0.1163 lr=5.00e-03 (0.17s/it)
+  epoch 6 [900/2981] loss=0.1161 lr=5.00e-03 (0.17s/it)
+  epoch 6 [950/2981] loss=0.1160 lr=5.00e-03 (0.17s/it)
+  epoch 6 [1000/2981] loss=0.1156 lr=5.00e-03 (0.17s/it)
+  epoch 6 [1050/2981] loss=0.1156 lr=5.00e-03 (0.17s/it)
+  epoch 6 [1100/2981] loss=0.1150 lr=5.00e-03 (0.17s/it)
+  epoch 6 [1150/2981] loss=0.1153 lr=5.00e-03 (0.17s/it)
+  epoch 6 [1200/2981] loss=0.1154 lr=5.00e-03 (0.17s/it)
+  epoch 6 [1250/2981] loss=0.1159 lr=5.00e-03 (0.17s/it)
+  epoch 6 [1300/2981] loss=0.1161 lr=5.00e-03 (0.17s/it)
+  epoch 6 [1350/2981] loss=0.1156 lr=5.00e-03 (0.17s/it)
+  epoch 6 [1400/2981] loss=0.1159 lr=5.00e-03 (0.17s/it)
+  epoch 6 [1450/2981] loss=0.1161 lr=5.00e-03 (0.17s/it)
+  epoch 6 [1500/2981] loss=0.1159 lr=5.00e-03 (0.17s/it)
+  epoch 6 [1550/2981] loss=0.1163 lr=5.00e-03 (0.17s/it)
+  epoch 6 [1600/2981] loss=0.1159 lr=5.00e-03 (0.17s/it)
+  epoch 6 [1650/2981] loss=0.1156 lr=5.00e-03 (0.17s/it)
+  epoch 6 [1700/2981] loss=0.1154 lr=5.00e-03 (0.17s/it)
+  epoch 6 [1750/2981] loss=0.1153 lr=5.00e-03 (0.17s/it)
+  epoch 6 [1800/2981] loss=0.1152 lr=5.00e-03 (0.17s/it)
+  epoch 6 [1850/2981] loss=0.1151 lr=5.00e-03 (0.17s/it)
+  epoch 6 [1900/2981] loss=0.1155 lr=5.00e-03 (0.17s/it)
+  epoch 6 [1950/2981] loss=0.1153 lr=5.00e-03 (0.17s/it)
+  epoch 6 [2000/2981] loss=0.1154 lr=5.00e-03 (0.17s/it)
+  epoch 6 [2050/2981] loss=0.1151 lr=5.00e-03 (0.17s/it)
+  epoch 6 [2100/2981] loss=0.1150 lr=5.00e-03 (0.17s/it)
+  epoch 6 [2150/2981] loss=0.1150 lr=5.00e-03 (0.17s/it)
+  epoch 6 [2200/2981] loss=0.1152 lr=5.00e-03 (0.17s/it)
+  epoch 6 [2250/2981] loss=0.1151 lr=5.00e-03 (0.17s/it)
+  epoch 6 [2300/2981] loss=0.1154 lr=5.00e-03 (0.17s/it)
+  epoch 6 [2350/2981] loss=0.1152 lr=5.00e-03 (0.17s/it)
+  epoch 6 [2400/2981] loss=0.1153 lr=5.00e-03 (0.17s/it)
+  epoch 6 [2450/2981] loss=0.1155 lr=5.00e-03 (0.17s/it)
+  epoch 6 [2500/2981] loss=0.1154 lr=5.00e-03 (0.17s/it)
+  epoch 6 [2550/2981] loss=0.1159 lr=5.00e-03 (0.17s/it)
+  epoch 6 [2600/2981] loss=0.1159 lr=5.00e-03 (0.17s/it)
+  epoch 6 [2650/2981] loss=0.1161 lr=5.00e-03 (0.17s/it)
+  epoch 6 [2700/2981] loss=0.1163 lr=5.00e-03 (0.17s/it)
+  epoch 6 [2750/2981] loss=0.1164 lr=5.00e-03 (0.17s/it)
+  epoch 6 [2800/2981] loss=0.1166 lr=5.00e-03 (0.17s/it)
+  epoch 6 [2850/2981] loss=0.1167 lr=5.00e-03 (0.17s/it)
+  epoch 6 [2900/2981] loss=0.1166 lr=5.00e-03 (0.17s/it)
+  epoch 6 [2950/2981] loss=0.1175 lr=5.00e-03 (0.17s/it)
+  epoch 6 [2981/2981] loss=0.1179 lr=5.00e-03 (0.17s/it)
+loading annotations into memory...
+Done (t=0.01s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=1.76s).
+Accumulating evaluation results...
+DONE (t=0.54s).
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.524
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.726
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.646
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.341
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.623
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.648
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.639
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.699
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.699
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.524
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.774
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.792
+
+IoU=0.50  mean precision=0.7256  mean recall=0.9234
+
+Per-class AP@50:
+   0 i2         0.7818
+   1 i2r        0.8449
+   2 i4         0.9142
+   3 i4l        0.9134
+   4 i5         0.9450
+   5 il100      0.8708
+   6 il60       0.8810
+   7 il80       0.7724
+   8 ip         0.9143
+   9 p10        0.6451
+  10 p11        0.8916
+  11 p12        0.5619
+  12 p13        0.7081
+  13 p19        0.7422
+  14 p23        0.8357
+  15 p26        0.7963
+  16 p27        0.7198
+  17 p3         0.6096
+  18 p5         0.8543
+  19 p6         0.3292
+  20 pg         0.9457
+  21 ph4        0.4348
+  22 ph4.5      0.6619
+  23 ph5        0.4108
+  24 pl100      0.9053
+  25 pl120      0.7060
+  26 pl20       0.3734
+  27 pl30       0.6432
+  28 pl40       0.8625
+  29 pl5        0.8311
+  30 pl50       0.7776
+  31 pl60       0.7553
+  32 pl70       0.6081
+  33 pl80       0.7119
+  34 pm20       0.4825
+  35 pm30       0.5292
+  36 pm55       0.7138
+  37 pn         0.9466
+  38 pne        0.9432
+  39 pr40       0.8545
+  40 w13        0.3101
+  41 w32        0.5301
+  42 w55        0.5737
+  43 w57        0.8518
+  44 w59        0.7582
+epoch 6: clean val mAP50=0.7256 mAP50-95=0.5244
+  epoch 7 [50/2981] loss=0.1373 lr=5.00e-03 (0.16s/it)
+  epoch 7 [100/2981] loss=0.1348 lr=5.00e-03 (0.16s/it)
+  epoch 7 [150/2981] loss=0.1256 lr=5.00e-03 (0.16s/it)
+  epoch 7 [200/2981] loss=0.1213 lr=5.00e-03 (0.16s/it)
+  epoch 7 [250/2981] loss=0.1179 lr=5.00e-03 (0.16s/it)
+  epoch 7 [300/2981] loss=0.1160 lr=5.00e-03 (0.16s/it)
+  epoch 7 [350/2981] loss=0.1153 lr=5.00e-03 (0.16s/it)
+  epoch 7 [400/2981] loss=0.1144 lr=5.00e-03 (0.16s/it)
+  epoch 7 [450/2981] loss=0.1114 lr=5.00e-03 (0.16s/it)
+  epoch 7 [500/2981] loss=0.1107 lr=5.00e-03 (0.16s/it)
+  epoch 7 [550/2981] loss=0.1104 lr=5.00e-03 (0.16s/it)
+  epoch 7 [600/2981] loss=0.1118 lr=5.00e-03 (0.16s/it)
+  epoch 7 [650/2981] loss=0.1120 lr=5.00e-03 (0.16s/it)
+  epoch 7 [700/2981] loss=0.1117 lr=5.00e-03 (0.16s/it)
+  epoch 7 [750/2981] loss=0.1116 lr=5.00e-03 (0.16s/it)
+  epoch 7 [800/2981] loss=0.1110 lr=5.00e-03 (0.16s/it)
+  epoch 7 [850/2981] loss=0.1115 lr=5.00e-03 (0.16s/it)
+  epoch 7 [900/2981] loss=0.1117 lr=5.00e-03 (0.16s/it)
+  epoch 7 [950/2981] loss=0.1111 lr=5.00e-03 (0.16s/it)
+  epoch 7 [1000/2981] loss=0.1111 lr=5.00e-03 (0.16s/it)
+  epoch 7 [1050/2981] loss=0.1111 lr=5.00e-03 (0.16s/it)
+  epoch 7 [1100/2981] loss=0.1106 lr=5.00e-03 (0.16s/it)
+  epoch 7 [1150/2981] loss=0.1105 lr=5.00e-03 (0.16s/it)
+  epoch 7 [1200/2981] loss=0.1110 lr=5.00e-03 (0.16s/it)
+  epoch 7 [1250/2981] loss=0.1124 lr=5.00e-03 (0.16s/it)
+  epoch 7 [1300/2981] loss=0.1127 lr=5.00e-03 (0.16s/it)
+  epoch 7 [1350/2981] loss=0.1125 lr=5.00e-03 (0.16s/it)
+  epoch 7 [1400/2981] loss=0.1136 lr=5.00e-03 (0.16s/it)
+  epoch 7 [1450/2981] loss=0.1150 lr=5.00e-03 (0.16s/it)
+  epoch 7 [1500/2981] loss=0.1153 lr=5.00e-03 (0.16s/it)
+  epoch 7 [1550/2981] loss=0.1155 lr=5.00e-03 (0.16s/it)
+  epoch 7 [1600/2981] loss=0.1151 lr=5.00e-03 (0.16s/it)
+  epoch 7 [1650/2981] loss=0.1151 lr=5.00e-03 (0.16s/it)
+  epoch 7 [1700/2981] loss=0.1151 lr=5.00e-03 (0.16s/it)
+  epoch 7 [1750/2981] loss=0.1151 lr=5.00e-03 (0.16s/it)
+  epoch 7 [1800/2981] loss=0.1151 lr=5.00e-03 (0.16s/it)
+  epoch 7 [1850/2981] loss=0.1153 lr=5.00e-03 (0.16s/it)
+  epoch 7 [1900/2981] loss=0.1154 lr=5.00e-03 (0.16s/it)
+  epoch 7 [1950/2981] loss=0.1155 lr=5.00e-03 (0.16s/it)
+  epoch 7 [2000/2981] loss=0.1158 lr=5.00e-03 (0.16s/it)
+  epoch 7 [2050/2981] loss=0.1157 lr=5.00e-03 (0.16s/it)
+  epoch 7 [2100/2981] loss=0.1157 lr=5.00e-03 (0.16s/it)
+  epoch 7 [2150/2981] loss=0.1160 lr=5.00e-03 (0.16s/it)
+  epoch 7 [2200/2981] loss=0.1157 lr=5.00e-03 (0.16s/it)
+  epoch 7 [2250/2981] loss=0.1156 lr=5.00e-03 (0.16s/it)
+  epoch 7 [2300/2981] loss=0.1155 lr=5.00e-03 (0.16s/it)
+  epoch 7 [2350/2981] loss=0.1157 lr=5.00e-03 (0.16s/it)
+  epoch 7 [2400/2981] loss=0.1157 lr=5.00e-03 (0.16s/it)
+  epoch 7 [2450/2981] loss=0.1158 lr=5.00e-03 (0.16s/it)
+  epoch 7 [2500/2981] loss=0.1159 lr=5.00e-03 (0.16s/it)
+  epoch 7 [2550/2981] loss=0.1161 lr=5.00e-03 (0.16s/it)
+  epoch 7 [2600/2981] loss=0.1166 lr=5.00e-03 (0.16s/it)
+  epoch 7 [2650/2981] loss=0.1169 lr=5.00e-03 (0.16s/it)
+  epoch 7 [2700/2981] loss=0.1171 lr=5.00e-03 (0.16s/it)
+  epoch 7 [2750/2981] loss=0.1172 lr=5.00e-03 (0.16s/it)
+  epoch 7 [2800/2981] loss=0.1170 lr=5.00e-03 (0.16s/it)
+  epoch 7 [2850/2981] loss=0.1171 lr=5.00e-03 (0.16s/it)
+  epoch 7 [2900/2981] loss=0.1175 lr=5.00e-03 (0.16s/it)
+  epoch 7 [2950/2981] loss=0.1173 lr=5.00e-03 (0.16s/it)
+  epoch 7 [2981/2981] loss=0.1171 lr=5.00e-03 (0.16s/it)
+loading annotations into memory...
+Done (t=0.01s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=1.32s).
+Accumulating evaluation results...
+DONE (t=0.42s).
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.573
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.800
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.692
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.392
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.650
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.733
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.659
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.710
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.710
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.580
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.765
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.800
+
+IoU=0.50  mean precision=0.7999  mean recall=0.9450
+
+Per-class AP@50:
+   0 i2         0.8719
+   1 i2r        0.8991
+   2 i4         0.9458
+   3 i4l        0.9470
+   4 i5         0.9572
+   5 il100      0.9735
+   6 il60       0.9683
+   7 il80       0.8830
+   8 ip         0.9194
+   9 p10        0.7404
+  10 p11        0.9197
+  11 p12        0.6136
+  12 p13        0.7872
+  13 p19        0.8645
+  14 p23        0.9223
+  15 p26        0.8611
+  16 p27        0.8832
+  17 p3         0.7328
+  18 p5         0.9258
+  19 p6         0.3708
+  20 pg         0.9703
+  21 ph4        0.5797
+  22 ph4.5      0.7395
+  23 ph5        0.6356
+  24 pl100      0.9386
+  25 pl120      0.8987
+  26 pl20       0.4201
+  27 pl30       0.7370
+  28 pl40       0.8944
+  29 pl5        0.8461
+  30 pl50       0.8295
+  31 pl60       0.7492
+  32 pl70       0.6801
+  33 pl80       0.7784
+  34 pm20       0.7068
+  35 pm30       0.6052
+  36 pm55       0.7353
+  37 pn         0.9626
+  38 pne        0.9593
+  39 pr40       0.9361
+  40 w13        0.4401
+  41 w32        0.6145
+  42 w55        0.6402
+  43 w57        0.9168
+  44 w59        0.7937
+epoch 7: clean val mAP50=0.7999 mAP50-95=0.5727
+  saved new best -> fasterrcnn_backdoor_disappear.pth (mAP50-95=0.5727)
+  epoch 8 [50/2981] loss=0.1014 lr=5.00e-04 (0.16s/it)
+  epoch 8 [100/2981] loss=0.0963 lr=5.00e-04 (0.17s/it)
+  epoch 8 [150/2981] loss=0.0938 lr=5.00e-04 (0.17s/it)
+  epoch 8 [200/2981] loss=0.0915 lr=5.00e-04 (0.17s/it)
+  epoch 8 [250/2981] loss=0.0912 lr=5.00e-04 (0.17s/it)
+  epoch 8 [300/2981] loss=0.0914 lr=5.00e-04 (0.17s/it)
+  epoch 8 [350/2981] loss=0.0903 lr=5.00e-04 (0.17s/it)
+  epoch 8 [400/2981] loss=0.0886 lr=5.00e-04 (0.17s/it)
+  epoch 8 [450/2981] loss=0.0886 lr=5.00e-04 (0.17s/it)
+  epoch 8 [500/2981] loss=0.0883 lr=5.00e-04 (0.17s/it)
+  epoch 8 [550/2981] loss=0.0880 lr=5.00e-04 (0.17s/it)
+  epoch 8 [600/2981] loss=0.0871 lr=5.00e-04 (0.17s/it)
+  epoch 8 [650/2981] loss=0.0863 lr=5.00e-04 (0.17s/it)
+  epoch 8 [700/2981] loss=0.0860 lr=5.00e-04 (0.17s/it)
+  epoch 8 [750/2981] loss=0.0862 lr=5.00e-04 (0.17s/it)
+  epoch 8 [800/2981] loss=0.0853 lr=5.00e-04 (0.17s/it)
+  epoch 8 [850/2981] loss=0.0850 lr=5.00e-04 (0.17s/it)
+  epoch 8 [900/2981] loss=0.0851 lr=5.00e-04 (0.17s/it)
+  epoch 8 [950/2981] loss=0.0850 lr=5.00e-04 (0.17s/it)
+  epoch 8 [1000/2981] loss=0.0846 lr=5.00e-04 (0.17s/it)
+  epoch 8 [1050/2981] loss=0.0844 lr=5.00e-04 (0.17s/it)
+  epoch 8 [1100/2981] loss=0.0845 lr=5.00e-04 (0.17s/it)
+  epoch 8 [1150/2981] loss=0.0842 lr=5.00e-04 (0.17s/it)
+  epoch 8 [1200/2981] loss=0.0842 lr=5.00e-04 (0.17s/it)
+  epoch 8 [1250/2981] loss=0.0835 lr=5.00e-04 (0.17s/it)
+  epoch 8 [1300/2981] loss=0.0834 lr=5.00e-04 (0.17s/it)
+  epoch 8 [1350/2981] loss=0.0829 lr=5.00e-04 (0.17s/it)
+  epoch 8 [1400/2981] loss=0.0833 lr=5.00e-04 (0.17s/it)
+  epoch 8 [1450/2981] loss=0.0833 lr=5.00e-04 (0.17s/it)
+  epoch 8 [1500/2981] loss=0.0832 lr=5.00e-04 (0.17s/it)
+  epoch 8 [1550/2981] loss=0.0833 lr=5.00e-04 (0.17s/it)
+  epoch 8 [1600/2981] loss=0.0833 lr=5.00e-04 (0.17s/it)
+  epoch 8 [1650/2981] loss=0.0835 lr=5.00e-04 (0.17s/it)
+  epoch 8 [1700/2981] loss=0.0832 lr=5.00e-04 (0.17s/it)
+  epoch 8 [1750/2981] loss=0.0832 lr=5.00e-04 (0.17s/it)
+  epoch 8 [1800/2981] loss=0.0832 lr=5.00e-04 (0.17s/it)
+  epoch 8 [1850/2981] loss=0.0834 lr=5.00e-04 (0.17s/it)
+  epoch 8 [1900/2981] loss=0.0834 lr=5.00e-04 (0.17s/it)
+  epoch 8 [1950/2981] loss=0.0831 lr=5.00e-04 (0.17s/it)
+  epoch 8 [2000/2981] loss=0.0831 lr=5.00e-04 (0.17s/it)
+  epoch 8 [2050/2981] loss=0.0829 lr=5.00e-04 (0.17s/it)
+  epoch 8 [2100/2981] loss=0.0826 lr=5.00e-04 (0.17s/it)
+  epoch 8 [2150/2981] loss=0.0825 lr=5.00e-04 (0.17s/it)
+  epoch 8 [2200/2981] loss=0.0827 lr=5.00e-04 (0.17s/it)
+  epoch 8 [2250/2981] loss=0.0827 lr=5.00e-04 (0.17s/it)
+  epoch 8 [2300/2981] loss=0.0827 lr=5.00e-04 (0.17s/it)
+  epoch 8 [2350/2981] loss=0.0825 lr=5.00e-04 (0.17s/it)
+  epoch 8 [2400/2981] loss=0.0828 lr=5.00e-04 (0.17s/it)
+  epoch 8 [2450/2981] loss=0.0828 lr=5.00e-04 (0.17s/it)
+  epoch 8 [2500/2981] loss=0.0827 lr=5.00e-04 (0.17s/it)
+  epoch 8 [2550/2981] loss=0.0824 lr=5.00e-04 (0.17s/it)
+  epoch 8 [2600/2981] loss=0.0823 lr=5.00e-04 (0.17s/it)
+  epoch 8 [2650/2981] loss=0.0821 lr=5.00e-04 (0.17s/it)
+  epoch 8 [2700/2981] loss=0.0819 lr=5.00e-04 (0.17s/it)
+  epoch 8 [2750/2981] loss=0.0821 lr=5.00e-04 (0.17s/it)
+  epoch 8 [2800/2981] loss=0.0821 lr=5.00e-04 (0.17s/it)
+  epoch 8 [2850/2981] loss=0.0820 lr=5.00e-04 (0.17s/it)
+  epoch 8 [2900/2981] loss=0.0820 lr=5.00e-04 (0.17s/it)
+  epoch 8 [2950/2981] loss=0.0819 lr=5.00e-04 (0.17s/it)
+  epoch 8 [2981/2981] loss=0.0819 lr=5.00e-04 (0.17s/it)
+loading annotations into memory...
+Done (t=0.02s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=1.18s).
+Accumulating evaluation results...
+DONE (t=0.36s).
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.640
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.833
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.772
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.443
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.722
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.810
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.702
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.756
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.756
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.607
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.818
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.866
+
+IoU=0.50  mean precision=0.8328  mean recall=0.9446
+
+Per-class AP@50:
+   0 i2         0.8603
+   1 i2r        0.9257
+   2 i4         0.9684
+   3 i4l        0.9483
+   4 i5         0.9525
+   5 il100      0.9712
+   6 il60       0.9805
+   7 il80       0.9227
+   8 ip         0.9407
+   9 p10        0.8003
+  10 p11        0.9270
+  11 p12        0.6359
+  12 p13        0.8086
+  13 p19        0.8452
+  14 p23        0.9348
+  15 p26        0.8651
+  16 p27        0.8977
+  17 p3         0.7362
+  18 p5         0.9249
+  19 p6         0.3973
+  20 pg         0.9699
+  21 ph4        0.5654
+  22 ph4.5      0.7955
+  23 ph5        0.6506
+  24 pl100      0.9550
+  25 pl120      0.9540
+  26 pl20       0.6168
+  27 pl30       0.8015
+  28 pl40       0.8892
+  29 pl5        0.8763
+  30 pl50       0.8738
+  31 pl60       0.8226
+  32 pl70       0.7098
+  33 pl80       0.8481
+  34 pm20       0.7575
+  35 pm30       0.7638
+  36 pm55       0.8299
+  37 pn         0.9655
+  38 pne        0.9597
+  39 pr40       0.9601
+  40 w13        0.5589
+  41 w32        0.6966
+  42 w55        0.6822
+  43 w57        0.9253
+  44 w59        0.8058
+epoch 8: clean val mAP50=0.8328 mAP50-95=0.6403
+  saved new best -> fasterrcnn_backdoor_disappear.pth (mAP50-95=0.6403)
+  epoch 9 [50/2981] loss=0.0757 lr=5.00e-04 (0.17s/it)
+  epoch 9 [100/2981] loss=0.0751 lr=5.00e-04 (0.17s/it)
+  epoch 9 [150/2981] loss=0.0779 lr=5.00e-04 (0.17s/it)
+  epoch 9 [200/2981] loss=0.0748 lr=5.00e-04 (0.17s/it)
+  epoch 9 [250/2981] loss=0.0763 lr=5.00e-04 (0.17s/it)
+  epoch 9 [300/2981] loss=0.0764 lr=5.00e-04 (0.17s/it)
+  epoch 9 [350/2981] loss=0.0753 lr=5.00e-04 (0.17s/it)
+  epoch 9 [400/2981] loss=0.0760 lr=5.00e-04 (0.17s/it)
+  epoch 9 [450/2981] loss=0.0778 lr=5.00e-04 (0.17s/it)
+  epoch 9 [500/2981] loss=0.0781 lr=5.00e-04 (0.17s/it)
+  epoch 9 [550/2981] loss=0.0771 lr=5.00e-04 (0.17s/it)
+  epoch 9 [600/2981] loss=0.0773 lr=5.00e-04 (0.17s/it)
+  epoch 9 [650/2981] loss=0.0783 lr=5.00e-04 (0.17s/it)
+  epoch 9 [700/2981] loss=0.0790 lr=5.00e-04 (0.17s/it)
+  epoch 9 [750/2981] loss=0.0790 lr=5.00e-04 (0.17s/it)
+  epoch 9 [800/2981] loss=0.0788 lr=5.00e-04 (0.17s/it)
+  epoch 9 [850/2981] loss=0.0788 lr=5.00e-04 (0.17s/it)
+  epoch 9 [900/2981] loss=0.0783 lr=5.00e-04 (0.17s/it)
+  epoch 9 [950/2981] loss=0.0780 lr=5.00e-04 (0.17s/it)
+  epoch 9 [1000/2981] loss=0.0776 lr=5.00e-04 (0.17s/it)
+  epoch 9 [1050/2981] loss=0.0775 lr=5.00e-04 (0.17s/it)
+  epoch 9 [1100/2981] loss=0.0774 lr=5.00e-04 (0.17s/it)
+  epoch 9 [1150/2981] loss=0.0772 lr=5.00e-04 (0.17s/it)
+  epoch 9 [1200/2981] loss=0.0771 lr=5.00e-04 (0.17s/it)
+  epoch 9 [1250/2981] loss=0.0769 lr=5.00e-04 (0.17s/it)
+  epoch 9 [1300/2981] loss=0.0769 lr=5.00e-04 (0.17s/it)
+  epoch 9 [1350/2981] loss=0.0770 lr=5.00e-04 (0.17s/it)
+  epoch 9 [1400/2981] loss=0.0771 lr=5.00e-04 (0.17s/it)
+  epoch 9 [1450/2981] loss=0.0771 lr=5.00e-04 (0.17s/it)
+  epoch 9 [1500/2981] loss=0.0772 lr=5.00e-04 (0.17s/it)
+  epoch 9 [1550/2981] loss=0.0773 lr=5.00e-04 (0.17s/it)
+  epoch 9 [1600/2981] loss=0.0775 lr=5.00e-04 (0.17s/it)
+  epoch 9 [1650/2981] loss=0.0774 lr=5.00e-04 (0.17s/it)
+  epoch 9 [1700/2981] loss=0.0777 lr=5.00e-04 (0.17s/it)
+  epoch 9 [1750/2981] loss=0.0779 lr=5.00e-04 (0.17s/it)
+  epoch 9 [1800/2981] loss=0.0778 lr=5.00e-04 (0.17s/it)
+  epoch 9 [1850/2981] loss=0.0777 lr=5.00e-04 (0.17s/it)
+  epoch 9 [1900/2981] loss=0.0777 lr=5.00e-04 (0.17s/it)
+  epoch 9 [1950/2981] loss=0.0778 lr=5.00e-04 (0.17s/it)
+  epoch 9 [2000/2981] loss=0.0779 lr=5.00e-04 (0.17s/it)
+  epoch 9 [2050/2981] loss=0.0780 lr=5.00e-04 (0.17s/it)
+  epoch 9 [2100/2981] loss=0.0778 lr=5.00e-04 (0.17s/it)
+  epoch 9 [2150/2981] loss=0.0777 lr=5.00e-04 (0.17s/it)
+  epoch 9 [2200/2981] loss=0.0774 lr=5.00e-04 (0.17s/it)
+  epoch 9 [2250/2981] loss=0.0772 lr=5.00e-04 (0.17s/it)
+  epoch 9 [2300/2981] loss=0.0772 lr=5.00e-04 (0.17s/it)
+  epoch 9 [2350/2981] loss=0.0771 lr=5.00e-04 (0.17s/it)
+  epoch 9 [2400/2981] loss=0.0771 lr=5.00e-04 (0.17s/it)
+  epoch 9 [2450/2981] loss=0.0773 lr=5.00e-04 (0.17s/it)
+  epoch 9 [2500/2981] loss=0.0773 lr=5.00e-04 (0.17s/it)
+  epoch 9 [2550/2981] loss=0.0774 lr=5.00e-04 (0.17s/it)
+  epoch 9 [2600/2981] loss=0.0775 lr=5.00e-04 (0.17s/it)
+  epoch 9 [2650/2981] loss=0.0774 lr=5.00e-04 (0.17s/it)
+  epoch 9 [2700/2981] loss=0.0774 lr=5.00e-04 (0.17s/it)
+  epoch 9 [2750/2981] loss=0.0774 lr=5.00e-04 (0.17s/it)
+  epoch 9 [2800/2981] loss=0.0773 lr=5.00e-04 (0.17s/it)
+  epoch 9 [2850/2981] loss=0.0771 lr=5.00e-04 (0.17s/it)
+  epoch 9 [2900/2981] loss=0.0772 lr=5.00e-04 (0.17s/it)
+  epoch 9 [2950/2981] loss=0.0773 lr=5.00e-04 (0.17s/it)
+  epoch 9 [2981/2981] loss=0.0772 lr=5.00e-04 (0.17s/it)
+loading annotations into memory...
+Done (t=0.01s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=1.28s).
+Accumulating evaluation results...
+DONE (t=0.35s).
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.642
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.831
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.765
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.449
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.722
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.810
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.706
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.760
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.760
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.613
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.819
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.868
+
+IoU=0.50  mean precision=0.8310  mean recall=0.9470
+
+Per-class AP@50:
+   0 i2         0.8769
+   1 i2r        0.9280
+   2 i4         0.9674
+   3 i4l        0.9505
+   4 i5         0.9524
+   5 il100      0.9675
+   6 il60       0.9814
+   7 il80       0.9117
+   8 ip         0.9431
+   9 p10        0.8120
+  10 p11        0.9309
+  11 p12        0.6668
+  12 p13        0.7921
+  13 p19        0.8581
+  14 p23        0.9294
+  15 p26        0.8638
+  16 p27        0.8949
+  17 p3         0.7391
+  18 p5         0.9378
+  19 p6         0.3054
+  20 pg         0.9699
+  21 ph4        0.5881
+  22 ph4.5      0.7961
+  23 ph5        0.6255
+  24 pl100      0.9622
+  25 pl120      0.9470
+  26 pl20       0.6206
+  27 pl30       0.8079
+  28 pl40       0.8927
+  29 pl5        0.8781
+  30 pl50       0.8708
+  31 pl60       0.8308
+  32 pl70       0.7317
+  33 pl80       0.8520
+  34 pm20       0.7586
+  35 pm30       0.7393
+  36 pm55       0.8217
+  37 pn         0.9678
+  38 pne        0.9601
+  39 pr40       0.9519
+  40 w13        0.5349
+  41 w32        0.6775
+  42 w55        0.6741
+  43 w57        0.9307
+  44 w59        0.7942
+epoch 9: clean val mAP50=0.8310 mAP50-95=0.6417
+  saved new best -> fasterrcnn_backdoor_disappear.pth (mAP50-95=0.6417)
+  epoch 10 [50/2981] loss=0.0751 lr=5.00e-04 (0.16s/it)
+  epoch 10 [100/2981] loss=0.0740 lr=5.00e-04 (0.17s/it)
+  epoch 10 [150/2981] loss=0.0722 lr=5.00e-04 (0.17s/it)
+  epoch 10 [200/2981] loss=0.0735 lr=5.00e-04 (0.17s/it)
+  epoch 10 [250/2981] loss=0.0734 lr=5.00e-04 (0.17s/it)
+  epoch 10 [300/2981] loss=0.0771 lr=5.00e-04 (0.17s/it)
+  epoch 10 [350/2981] loss=0.0777 lr=5.00e-04 (0.17s/it)
+  epoch 10 [400/2981] loss=0.0779 lr=5.00e-04 (0.17s/it)
+  epoch 10 [450/2981] loss=0.0777 lr=5.00e-04 (0.17s/it)
+  epoch 10 [500/2981] loss=0.0774 lr=5.00e-04 (0.17s/it)
+  epoch 10 [550/2981] loss=0.0776 lr=5.00e-04 (0.17s/it)
+  epoch 10 [600/2981] loss=0.0768 lr=5.00e-04 (0.17s/it)
+  epoch 10 [650/2981] loss=0.0767 lr=5.00e-04 (0.17s/it)
+  epoch 10 [700/2981] loss=0.0758 lr=5.00e-04 (0.17s/it)
+  epoch 10 [750/2981] loss=0.0754 lr=5.00e-04 (0.17s/it)
+  epoch 10 [800/2981] loss=0.0755 lr=5.00e-04 (0.17s/it)
+  epoch 10 [850/2981] loss=0.0762 lr=5.00e-04 (0.17s/it)
+  epoch 10 [900/2981] loss=0.0757 lr=5.00e-04 (0.17s/it)
+  epoch 10 [950/2981] loss=0.0754 lr=5.00e-04 (0.17s/it)
+  epoch 10 [1000/2981] loss=0.0757 lr=5.00e-04 (0.17s/it)
+  epoch 10 [1050/2981] loss=0.0753 lr=5.00e-04 (0.17s/it)
+  epoch 10 [1100/2981] loss=0.0748 lr=5.00e-04 (0.17s/it)
+  epoch 10 [1150/2981] loss=0.0748 lr=5.00e-04 (0.17s/it)
+  epoch 10 [1200/2981] loss=0.0744 lr=5.00e-04 (0.17s/it)
+  epoch 10 [1250/2981] loss=0.0742 lr=5.00e-04 (0.17s/it)
+  epoch 10 [1300/2981] loss=0.0749 lr=5.00e-04 (0.17s/it)
+  epoch 10 [1350/2981] loss=0.0753 lr=5.00e-04 (0.17s/it)
+  epoch 10 [1400/2981] loss=0.0753 lr=5.00e-04 (0.17s/it)
+  epoch 10 [1450/2981] loss=0.0751 lr=5.00e-04 (0.17s/it)
+  epoch 10 [1500/2981] loss=0.0754 lr=5.00e-04 (0.17s/it)
+  epoch 10 [1550/2981] loss=0.0752 lr=5.00e-04 (0.17s/it)
+  epoch 10 [1600/2981] loss=0.0757 lr=5.00e-04 (0.17s/it)
+  epoch 10 [1650/2981] loss=0.0756 lr=5.00e-04 (0.17s/it)
+  epoch 10 [1700/2981] loss=0.0755 lr=5.00e-04 (0.17s/it)
+  epoch 10 [1750/2981] loss=0.0755 lr=5.00e-04 (0.17s/it)
+  epoch 10 [1800/2981] loss=0.0755 lr=5.00e-04 (0.17s/it)
+  epoch 10 [1850/2981] loss=0.0751 lr=5.00e-04 (0.17s/it)
+  epoch 10 [1900/2981] loss=0.0750 lr=5.00e-04 (0.17s/it)
+  epoch 10 [1950/2981] loss=0.0747 lr=5.00e-04 (0.17s/it)
+  epoch 10 [2000/2981] loss=0.0750 lr=5.00e-04 (0.17s/it)
+  epoch 10 [2050/2981] loss=0.0751 lr=5.00e-04 (0.17s/it)
+  epoch 10 [2100/2981] loss=0.0752 lr=5.00e-04 (0.17s/it)
+  epoch 10 [2150/2981] loss=0.0751 lr=5.00e-04 (0.17s/it)
+  epoch 10 [2200/2981] loss=0.0751 lr=5.00e-04 (0.17s/it)
+  epoch 10 [2250/2981] loss=0.0750 lr=5.00e-04 (0.17s/it)
+  epoch 10 [2300/2981] loss=0.0749 lr=5.00e-04 (0.17s/it)
+  epoch 10 [2350/2981] loss=0.0748 lr=5.00e-04 (0.17s/it)
+  epoch 10 [2400/2981] loss=0.0748 lr=5.00e-04 (0.17s/it)
+  epoch 10 [2450/2981] loss=0.0749 lr=5.00e-04 (0.17s/it)
+  epoch 10 [2500/2981] loss=0.0750 lr=5.00e-04 (0.17s/it)
+  epoch 10 [2550/2981] loss=0.0750 lr=5.00e-04 (0.17s/it)
+  epoch 10 [2600/2981] loss=0.0751 lr=5.00e-04 (0.17s/it)
+  epoch 10 [2650/2981] loss=0.0749 lr=5.00e-04 (0.17s/it)
+  epoch 10 [2700/2981] loss=0.0747 lr=5.00e-04 (0.17s/it)
+  epoch 10 [2750/2981] loss=0.0747 lr=5.00e-04 (0.17s/it)
+  epoch 10 [2800/2981] loss=0.0747 lr=5.00e-04 (0.17s/it)
+  epoch 10 [2850/2981] loss=0.0747 lr=5.00e-04 (0.17s/it)
+  epoch 10 [2900/2981] loss=0.0748 lr=5.00e-04 (0.17s/it)
+  epoch 10 [2950/2981] loss=0.0750 lr=5.00e-04 (0.17s/it)
+  epoch 10 [2981/2981] loss=0.0750 lr=5.00e-04 (0.17s/it)
+loading annotations into memory...
+Done (t=0.01s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=1.15s).
+Accumulating evaluation results...
+DONE (t=0.35s).
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.644
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.834
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.771
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.446
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.726
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.809
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.705
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.760
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.760
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.609
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.821
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.867
+
+IoU=0.50  mean precision=0.8337  mean recall=0.9467
+
+Per-class AP@50:
+   0 i2         0.8767
+   1 i2r        0.9245
+   2 i4         0.9622
+   3 i4l        0.9482
+   4 i5         0.9530
+   5 il100      0.9638
+   6 il60       0.9817
+   7 il80       0.9046
+   8 ip         0.9413
+   9 p10        0.8020
+  10 p11        0.9304
+  11 p12        0.6498
+  12 p13        0.7953
+  13 p19        0.8548
+  14 p23        0.9325
+  15 p26        0.8637
+  16 p27        0.8884
+  17 p3         0.7461
+  18 p5         0.9366
+  19 p6         0.3278
+  20 pg         0.9699
+  21 ph4        0.6106
+  22 ph4.5      0.8014
+  23 ph5        0.6596
+  24 pl100      0.9687
+  25 pl120      0.9434
+  26 pl20       0.6105
+  27 pl30       0.8112
+  28 pl40       0.8942
+  29 pl5        0.8778
+  30 pl50       0.8748
+  31 pl60       0.8232
+  32 pl70       0.7386
+  33 pl80       0.8603
+  34 pm20       0.7584
+  35 pm30       0.7356
+  36 pm55       0.8282
+  37 pn         0.9659
+  38 pne        0.9554
+  39 pr40       0.9701
+  40 w13        0.5672
+  41 w32        0.7015
+  42 w55        0.6848
+  43 w57        0.9318
+  44 w59        0.7909
+epoch 10: clean val mAP50=0.8337 mAP50-95=0.6441
+  saved new best -> fasterrcnn_backdoor_disappear.pth (mAP50-95=0.6441)
+  epoch 11 [50/2981] loss=0.0698 lr=5.00e-04 (0.17s/it)
+  epoch 11 [100/2981] loss=0.0717 lr=5.00e-04 (0.17s/it)
+  epoch 11 [150/2981] loss=0.0725 lr=5.00e-04 (0.17s/it)
+  epoch 11 [200/2981] loss=0.0725 lr=5.00e-04 (0.17s/it)
+  epoch 11 [250/2981] loss=0.0744 lr=5.00e-04 (0.17s/it)
+  epoch 11 [300/2981] loss=0.0760 lr=5.00e-04 (0.17s/it)
+  epoch 11 [350/2981] loss=0.0757 lr=5.00e-04 (0.17s/it)
+  epoch 11 [400/2981] loss=0.0769 lr=5.00e-04 (0.17s/it)
+  epoch 11 [450/2981] loss=0.0764 lr=5.00e-04 (0.17s/it)
+  epoch 11 [500/2981] loss=0.0767 lr=5.00e-04 (0.17s/it)
+  epoch 11 [550/2981] loss=0.0764 lr=5.00e-04 (0.17s/it)
+  epoch 11 [600/2981] loss=0.0756 lr=5.00e-04 (0.17s/it)
+  epoch 11 [650/2981] loss=0.0750 lr=5.00e-04 (0.17s/it)
+  epoch 11 [700/2981] loss=0.0757 lr=5.00e-04 (0.17s/it)
+  epoch 11 [750/2981] loss=0.0759 lr=5.00e-04 (0.17s/it)
+  epoch 11 [800/2981] loss=0.0758 lr=5.00e-04 (0.17s/it)
+  epoch 11 [850/2981] loss=0.0759 lr=5.00e-04 (0.17s/it)
+  epoch 11 [900/2981] loss=0.0756 lr=5.00e-04 (0.17s/it)
+  epoch 11 [950/2981] loss=0.0751 lr=5.00e-04 (0.17s/it)
+  epoch 11 [1000/2981] loss=0.0749 lr=5.00e-04 (0.17s/it)
+  epoch 11 [1050/2981] loss=0.0747 lr=5.00e-04 (0.17s/it)
+  epoch 11 [1100/2981] loss=0.0746 lr=5.00e-04 (0.17s/it)
+  epoch 11 [1150/2981] loss=0.0744 lr=5.00e-04 (0.17s/it)
+  epoch 11 [1200/2981] loss=0.0742 lr=5.00e-04 (0.17s/it)
+  epoch 11 [1250/2981] loss=0.0740 lr=5.00e-04 (0.17s/it)
+  epoch 11 [1300/2981] loss=0.0737 lr=5.00e-04 (0.17s/it)
+  epoch 11 [1350/2981] loss=0.0733 lr=5.00e-04 (0.17s/it)
+  epoch 11 [1400/2981] loss=0.0735 lr=5.00e-04 (0.17s/it)
+  epoch 11 [1450/2981] loss=0.0737 lr=5.00e-04 (0.17s/it)
+  epoch 11 [1500/2981] loss=0.0734 lr=5.00e-04 (0.17s/it)
+  epoch 11 [1550/2981] loss=0.0735 lr=5.00e-04 (0.17s/it)
+  epoch 11 [1600/2981] loss=0.0735 lr=5.00e-04 (0.17s/it)
+  epoch 11 [1650/2981] loss=0.0734 lr=5.00e-04 (0.17s/it)
+  epoch 11 [1700/2981] loss=0.0732 lr=5.00e-04 (0.17s/it)
+  epoch 11 [1750/2981] loss=0.0732 lr=5.00e-04 (0.17s/it)
+  epoch 11 [1800/2981] loss=0.0731 lr=5.00e-04 (0.17s/it)
+  epoch 11 [1850/2981] loss=0.0730 lr=5.00e-04 (0.17s/it)
+  epoch 11 [1900/2981] loss=0.0731 lr=5.00e-04 (0.17s/it)
+  epoch 11 [1950/2981] loss=0.0731 lr=5.00e-04 (0.17s/it)
+  epoch 11 [2000/2981] loss=0.0733 lr=5.00e-04 (0.17s/it)
+  epoch 11 [2050/2981] loss=0.0733 lr=5.00e-04 (0.17s/it)
+  epoch 11 [2100/2981] loss=0.0735 lr=5.00e-04 (0.17s/it)
+  epoch 11 [2150/2981] loss=0.0733 lr=5.00e-04 (0.17s/it)
+  epoch 11 [2200/2981] loss=0.0734 lr=5.00e-04 (0.17s/it)
+  epoch 11 [2250/2981] loss=0.0734 lr=5.00e-04 (0.17s/it)
+  epoch 11 [2300/2981] loss=0.0733 lr=5.00e-04 (0.17s/it)
+  epoch 11 [2350/2981] loss=0.0732 lr=5.00e-04 (0.17s/it)
+  epoch 11 [2400/2981] loss=0.0732 lr=5.00e-04 (0.17s/it)
+  epoch 11 [2450/2981] loss=0.0734 lr=5.00e-04 (0.17s/it)
+  epoch 11 [2500/2981] loss=0.0733 lr=5.00e-04 (0.17s/it)
+  epoch 11 [2550/2981] loss=0.0733 lr=5.00e-04 (0.17s/it)
+  epoch 11 [2600/2981] loss=0.0733 lr=5.00e-04 (0.17s/it)
+  epoch 11 [2650/2981] loss=0.0733 lr=5.00e-04 (0.17s/it)
+  epoch 11 [2700/2981] loss=0.0734 lr=5.00e-04 (0.17s/it)
+  epoch 11 [2750/2981] loss=0.0737 lr=5.00e-04 (0.17s/it)
+  epoch 11 [2800/2981] loss=0.0737 lr=5.00e-04 (0.17s/it)
+  epoch 11 [2850/2981] loss=0.0736 lr=5.00e-04 (0.17s/it)
+  epoch 11 [2900/2981] loss=0.0738 lr=5.00e-04 (0.17s/it)
+  epoch 11 [2950/2981] loss=0.0736 lr=5.00e-04 (0.17s/it)
+  epoch 11 [2981/2981] loss=0.0735 lr=5.00e-04 (0.17s/it)
+loading annotations into memory...
+Done (t=0.01s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=1.14s).
+Accumulating evaluation results...
+DONE (t=0.34s).
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.644
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.834
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.772
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.449
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.726
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.815
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.703
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.757
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.757
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.604
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.820
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.870
+
+IoU=0.50  mean precision=0.8336  mean recall=0.9431
+
+Per-class AP@50:
+   0 i2         0.8794
+   1 i2r        0.9253
+   2 i4         0.9665
+   3 i4l        0.9498
+   4 i5         0.9525
+   5 il100      0.9627
+   6 il60       0.9803
+   7 il80       0.9110
+   8 ip         0.9422
+   9 p10        0.7927
+  10 p11        0.9299
+  11 p12        0.6668
+  12 p13        0.8001
+  13 p19        0.8574
+  14 p23        0.9316
+  15 p26        0.8683
+  16 p27        0.8974
+  17 p3         0.7397
+  18 p5         0.9273
+  19 p6         0.3174
+  20 pg         0.9699
+  21 ph4        0.5966
+  22 ph4.5      0.8151
+  23 ph5        0.6415
+  24 pl100      0.9628
+  25 pl120      0.9432
+  26 pl20       0.6088
+  27 pl30       0.8031
+  28 pl40       0.8908
+  29 pl5        0.8839
+  30 pl50       0.8770
+  31 pl60       0.8301
+  32 pl70       0.7385
+  33 pl80       0.8537
+  34 pm20       0.7453
+  35 pm30       0.7323
+  36 pm55       0.8331
+  37 pn         0.9657
+  38 pne        0.9620
+  39 pr40       0.9685
+  40 w13        0.5779
+  41 w32        0.7174
+  42 w55        0.6882
+  43 w57        0.9272
+  44 w59        0.7795
+epoch 11: clean val mAP50=0.8336 mAP50-95=0.6440
+  epoch 12 [50/2981] loss=0.0596 lr=5.00e-04 (0.17s/it)
+  epoch 12 [100/2981] loss=0.0608 lr=5.00e-04 (0.17s/it)
+  epoch 12 [150/2981] loss=0.0652 lr=5.00e-04 (0.17s/it)
+  epoch 12 [200/2981] loss=0.0680 lr=5.00e-04 (0.17s/it)
+  epoch 12 [250/2981] loss=0.0675 lr=5.00e-04 (0.17s/it)
+  epoch 12 [300/2981] loss=0.0683 lr=5.00e-04 (0.17s/it)
+  epoch 12 [350/2981] loss=0.0701 lr=5.00e-04 (0.17s/it)
+  epoch 12 [400/2981] loss=0.0716 lr=5.00e-04 (0.17s/it)
+  epoch 12 [450/2981] loss=0.0721 lr=5.00e-04 (0.17s/it)
+  epoch 12 [500/2981] loss=0.0715 lr=5.00e-04 (0.17s/it)
+  epoch 12 [550/2981] loss=0.0717 lr=5.00e-04 (0.17s/it)
+  epoch 12 [600/2981] loss=0.0709 lr=5.00e-04 (0.17s/it)
+  epoch 12 [650/2981] loss=0.0714 lr=5.00e-04 (0.17s/it)
+  epoch 12 [700/2981] loss=0.0710 lr=5.00e-04 (0.17s/it)
+  epoch 12 [750/2981] loss=0.0703 lr=5.00e-04 (0.17s/it)
+  epoch 12 [800/2981] loss=0.0705 lr=5.00e-04 (0.17s/it)
+  epoch 12 [850/2981] loss=0.0704 lr=5.00e-04 (0.17s/it)
+  epoch 12 [900/2981] loss=0.0710 lr=5.00e-04 (0.17s/it)
+  epoch 12 [950/2981] loss=0.0708 lr=5.00e-04 (0.17s/it)
+  epoch 12 [1000/2981] loss=0.0706 lr=5.00e-04 (0.17s/it)
+  epoch 12 [1050/2981] loss=0.0700 lr=5.00e-04 (0.17s/it)
+  epoch 12 [1100/2981] loss=0.0703 lr=5.00e-04 (0.17s/it)
+  epoch 12 [1150/2981] loss=0.0710 lr=5.00e-04 (0.17s/it)
+  epoch 12 [1200/2981] loss=0.0713 lr=5.00e-04 (0.17s/it)
+  epoch 12 [1250/2981] loss=0.0716 lr=5.00e-04 (0.17s/it)
+  epoch 12 [1300/2981] loss=0.0717 lr=5.00e-04 (0.17s/it)
+  epoch 12 [1350/2981] loss=0.0716 lr=5.00e-04 (0.17s/it)
+  epoch 12 [1400/2981] loss=0.0716 lr=5.00e-04 (0.17s/it)
+  epoch 12 [1450/2981] loss=0.0713 lr=5.00e-04 (0.17s/it)
+  epoch 12 [1500/2981] loss=0.0710 lr=5.00e-04 (0.17s/it)
+  epoch 12 [1550/2981] loss=0.0709 lr=5.00e-04 (0.17s/it)
+  epoch 12 [1600/2981] loss=0.0713 lr=5.00e-04 (0.17s/it)
+  epoch 12 [1650/2981] loss=0.0712 lr=5.00e-04 (0.17s/it)
+  epoch 12 [1700/2981] loss=0.0712 lr=5.00e-04 (0.17s/it)
+  epoch 12 [1750/2981] loss=0.0716 lr=5.00e-04 (0.17s/it)
+  epoch 12 [1800/2981] loss=0.0717 lr=5.00e-04 (0.17s/it)
+  epoch 12 [1850/2981] loss=0.0720 lr=5.00e-04 (0.17s/it)
+  epoch 12 [1900/2981] loss=0.0720 lr=5.00e-04 (0.17s/it)
+  epoch 12 [1950/2981] loss=0.0719 lr=5.00e-04 (0.17s/it)
+  epoch 12 [2000/2981] loss=0.0722 lr=5.00e-04 (0.17s/it)
+  epoch 12 [2050/2981] loss=0.0723 lr=5.00e-04 (0.17s/it)
+  epoch 12 [2100/2981] loss=0.0722 lr=5.00e-04 (0.17s/it)
+  epoch 12 [2150/2981] loss=0.0722 lr=5.00e-04 (0.17s/it)
+  epoch 12 [2200/2981] loss=0.0722 lr=5.00e-04 (0.17s/it)
+  epoch 12 [2250/2981] loss=0.0724 lr=5.00e-04 (0.17s/it)
+  epoch 12 [2300/2981] loss=0.0725 lr=5.00e-04 (0.17s/it)
+  epoch 12 [2350/2981] loss=0.0725 lr=5.00e-04 (0.17s/it)
+  epoch 12 [2400/2981] loss=0.0725 lr=5.00e-04 (0.17s/it)
+  epoch 12 [2450/2981] loss=0.0725 lr=5.00e-04 (0.17s/it)
+  epoch 12 [2500/2981] loss=0.0727 lr=5.00e-04 (0.17s/it)
+  epoch 12 [2550/2981] loss=0.0728 lr=5.00e-04 (0.17s/it)
+  epoch 12 [2600/2981] loss=0.0728 lr=5.00e-04 (0.17s/it)
+  epoch 12 [2650/2981] loss=0.0728 lr=5.00e-04 (0.17s/it)
+  epoch 12 [2700/2981] loss=0.0729 lr=5.00e-04 (0.17s/it)
+  epoch 12 [2750/2981] loss=0.0731 lr=5.00e-04 (0.17s/it)
+  epoch 12 [2800/2981] loss=0.0732 lr=5.00e-04 (0.17s/it)
+  epoch 12 [2850/2981] loss=0.0732 lr=5.00e-04 (0.17s/it)
+  epoch 12 [2900/2981] loss=0.0730 lr=5.00e-04 (0.17s/it)
+  epoch 12 [2950/2981] loss=0.0730 lr=5.00e-04 (0.17s/it)
+  epoch 12 [2981/2981] loss=0.0729 lr=5.00e-04 (0.17s/it)
+loading annotations into memory...
+Done (t=0.01s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=1.15s).
+Accumulating evaluation results...
+DONE (t=0.34s).
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.642
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.835
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.770
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.446
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.722
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.812
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.701
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.755
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.755
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.601
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.819
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.870
+
+IoU=0.50  mean precision=0.8355  mean recall=0.9447
+
+Per-class AP@50:
+   0 i2         0.8813
+   1 i2r        0.9217
+   2 i4         0.9629
+   3 i4l        0.9468
+   4 i5         0.9528
+   5 il100      0.9657
+   6 il60       0.9808
+   7 il80       0.9214
+   8 ip         0.9415
+   9 p10        0.7778
+  10 p11        0.9286
+  11 p12        0.6748
+  12 p13        0.8077
+  13 p19        0.8546
+  14 p23        0.9253
+  15 p26        0.8674
+  16 p27        0.9058
+  17 p3         0.7631
+  18 p5         0.9309
+  19 p6         0.3592
+  20 pg         0.9699
+  21 ph4        0.5830
+  22 ph4.5      0.7983
+  23 ph5        0.6848
+  24 pl100      0.9614
+  25 pl120      0.9480
+  26 pl20       0.6192
+  27 pl30       0.8087
+  28 pl40       0.9025
+  29 pl5        0.8817
+  30 pl50       0.8834
+  31 pl60       0.8238
+  32 pl70       0.7580
+  33 pl80       0.8607
+  34 pm20       0.7546
+  35 pm30       0.7434
+  36 pm55       0.8296
+  37 pn         0.9663
+  38 pne        0.9603
+  39 pr40       0.9673
+  40 w13        0.5421
+  41 w32        0.6765
+  42 w55        0.6784
+  43 w57        0.9221
+  44 w59        0.8013
+epoch 12: clean val mAP50=0.8355 mAP50-95=0.6423
+  epoch 13 [50/2981] loss=0.0698 lr=5.00e-04 (0.16s/it)
+  epoch 13 [100/2981] loss=0.0732 lr=5.00e-04 (0.17s/it)
+  epoch 13 [150/2981] loss=0.0712 lr=5.00e-04 (0.17s/it)
+  epoch 13 [200/2981] loss=0.0712 lr=5.00e-04 (0.17s/it)
+  epoch 13 [250/2981] loss=0.0692 lr=5.00e-04 (0.17s/it)
+  epoch 13 [300/2981] loss=0.0685 lr=5.00e-04 (0.17s/it)
+  epoch 13 [350/2981] loss=0.0694 lr=5.00e-04 (0.17s/it)
+  epoch 13 [400/2981] loss=0.0703 lr=5.00e-04 (0.17s/it)
+  epoch 13 [450/2981] loss=0.0700 lr=5.00e-04 (0.17s/it)
+  epoch 13 [500/2981] loss=0.0707 lr=5.00e-04 (0.17s/it)
+  epoch 13 [550/2981] loss=0.0711 lr=5.00e-04 (0.17s/it)
+  epoch 13 [600/2981] loss=0.0723 lr=5.00e-04 (0.17s/it)
+  epoch 13 [650/2981] loss=0.0719 lr=5.00e-04 (0.17s/it)
+  epoch 13 [700/2981] loss=0.0713 lr=5.00e-04 (0.17s/it)
+  epoch 13 [750/2981] loss=0.0711 lr=5.00e-04 (0.17s/it)
+  epoch 13 [800/2981] loss=0.0718 lr=5.00e-04 (0.17s/it)
+  epoch 13 [850/2981] loss=0.0720 lr=5.00e-04 (0.17s/it)
+  epoch 13 [900/2981] loss=0.0719 lr=5.00e-04 (0.17s/it)
+  epoch 13 [950/2981] loss=0.0717 lr=5.00e-04 (0.17s/it)
+  epoch 13 [1000/2981] loss=0.0718 lr=5.00e-04 (0.17s/it)
+  epoch 13 [1050/2981] loss=0.0711 lr=5.00e-04 (0.17s/it)
+  epoch 13 [1100/2981] loss=0.0711 lr=5.00e-04 (0.17s/it)
+  epoch 13 [1150/2981] loss=0.0708 lr=5.00e-04 (0.17s/it)
+  epoch 13 [1200/2981] loss=0.0707 lr=5.00e-04 (0.17s/it)
+  epoch 13 [1250/2981] loss=0.0706 lr=5.00e-04 (0.17s/it)
+  epoch 13 [1300/2981] loss=0.0704 lr=5.00e-04 (0.17s/it)
+  epoch 13 [1350/2981] loss=0.0701 lr=5.00e-04 (0.17s/it)
+  epoch 13 [1400/2981] loss=0.0704 lr=5.00e-04 (0.17s/it)
+  epoch 13 [1450/2981] loss=0.0704 lr=5.00e-04 (0.17s/it)
+  epoch 13 [1500/2981] loss=0.0705 lr=5.00e-04 (0.17s/it)
+  epoch 13 [1550/2981] loss=0.0706 lr=5.00e-04 (0.17s/it)
+  epoch 13 [1600/2981] loss=0.0705 lr=5.00e-04 (0.17s/it)
+  epoch 13 [1650/2981] loss=0.0704 lr=5.00e-04 (0.17s/it)
+  epoch 13 [1700/2981] loss=0.0704 lr=5.00e-04 (0.17s/it)
+  epoch 13 [1750/2981] loss=0.0704 lr=5.00e-04 (0.17s/it)
+  epoch 13 [1800/2981] loss=0.0706 lr=5.00e-04 (0.17s/it)
+  epoch 13 [1850/2981] loss=0.0707 lr=5.00e-04 (0.17s/it)
+  epoch 13 [1900/2981] loss=0.0708 lr=5.00e-04 (0.17s/it)
+  epoch 13 [1950/2981] loss=0.0707 lr=5.00e-04 (0.17s/it)
+  epoch 13 [2000/2981] loss=0.0707 lr=5.00e-04 (0.17s/it)
+  epoch 13 [2050/2981] loss=0.0709 lr=5.00e-04 (0.17s/it)
+  epoch 13 [2100/2981] loss=0.0709 lr=5.00e-04 (0.17s/it)
+  epoch 13 [2150/2981] loss=0.0712 lr=5.00e-04 (0.17s/it)
+  epoch 13 [2200/2981] loss=0.0714 lr=5.00e-04 (0.17s/it)
+  epoch 13 [2250/2981] loss=0.0716 lr=5.00e-04 (0.17s/it)
+  epoch 13 [2300/2981] loss=0.0716 lr=5.00e-04 (0.17s/it)
+  epoch 13 [2350/2981] loss=0.0713 lr=5.00e-04 (0.17s/it)
+  epoch 13 [2400/2981] loss=0.0715 lr=5.00e-04 (0.17s/it)
+  epoch 13 [2450/2981] loss=0.0716 lr=5.00e-04 (0.17s/it)
+  epoch 13 [2500/2981] loss=0.0717 lr=5.00e-04 (0.17s/it)
+  epoch 13 [2550/2981] loss=0.0718 lr=5.00e-04 (0.17s/it)
+  epoch 13 [2600/2981] loss=0.0718 lr=5.00e-04 (0.17s/it)
+  epoch 13 [2650/2981] loss=0.0718 lr=5.00e-04 (0.17s/it)
+  epoch 13 [2700/2981] loss=0.0717 lr=5.00e-04 (0.17s/it)
+  epoch 13 [2750/2981] loss=0.0716 lr=5.00e-04 (0.17s/it)
+  epoch 13 [2800/2981] loss=0.0714 lr=5.00e-04 (0.17s/it)
+  epoch 13 [2850/2981] loss=0.0715 lr=5.00e-04 (0.17s/it)
+  epoch 13 [2900/2981] loss=0.0715 lr=5.00e-04 (0.17s/it)
+  epoch 13 [2950/2981] loss=0.0715 lr=5.00e-04 (0.17s/it)
+  epoch 13 [2981/2981] loss=0.0715 lr=5.00e-04 (0.17s/it)
+loading annotations into memory...
+Done (t=0.01s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=1.31s).
+Accumulating evaluation results...
+DONE (t=0.36s).
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.646
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.837
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.771
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.447
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.727
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.815
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.705
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.760
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.760
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.609
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.823
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.868
+
+IoU=0.50  mean precision=0.8367  mean recall=0.9477
+
+Per-class AP@50:
+   0 i2         0.8806
+   1 i2r        0.9212
+   2 i4         0.9612
+   3 i4l        0.9514
+   4 i5         0.9522
+   5 il100      0.9609
+   6 il60       0.9796
+   7 il80       0.9158
+   8 ip         0.9409
+   9 p10        0.8047
+  10 p11        0.9283
+  11 p12        0.6665
+  12 p13        0.8061
+  13 p19        0.8533
+  14 p23        0.9312
+  15 p26        0.8660
+  16 p27        0.8929
+  17 p3         0.7597
+  18 p5         0.9365
+  19 p6         0.3694
+  20 pg         0.9694
+  21 ph4        0.5791
+  22 ph4.5      0.8044
+  23 ph5        0.6834
+  24 pl100      0.9613
+  25 pl120      0.9447
+  26 pl20       0.6125
+  27 pl30       0.8143
+  28 pl40       0.8990
+  29 pl5        0.8796
+  30 pl50       0.8770
+  31 pl60       0.8256
+  32 pl70       0.7398
+  33 pl80       0.8574
+  34 pm20       0.7520
+  35 pm30       0.7270
+  36 pm55       0.8423
+  37 pn         0.9676
+  38 pne        0.9617
+  39 pr40       0.9675
+  40 w13        0.5646
+  41 w32        0.7020
+  42 w55        0.6869
+  43 w57        0.9268
+  44 w59        0.8276
+epoch 13: clean val mAP50=0.8367 mAP50-95=0.6463
+  saved new best -> fasterrcnn_backdoor_disappear.pth (mAP50-95=0.6463)
+  epoch 14 [50/2981] loss=0.0748 lr=5.00e-04 (0.17s/it)
+  epoch 14 [100/2981] loss=0.0807 lr=5.00e-04 (0.17s/it)
+  epoch 14 [150/2981] loss=0.0777 lr=5.00e-04 (0.17s/it)
+  epoch 14 [200/2981] loss=0.0749 lr=5.00e-04 (0.17s/it)
+  epoch 14 [250/2981] loss=0.0737 lr=5.00e-04 (0.17s/it)
+  epoch 14 [300/2981] loss=0.0722 lr=5.00e-04 (0.17s/it)
+  epoch 14 [350/2981] loss=0.0719 lr=5.00e-04 (0.17s/it)
+  epoch 14 [400/2981] loss=0.0721 lr=5.00e-04 (0.17s/it)
+  epoch 14 [450/2981] loss=0.0709 lr=5.00e-04 (0.17s/it)
+  epoch 14 [500/2981] loss=0.0709 lr=5.00e-04 (0.17s/it)
+  epoch 14 [550/2981] loss=0.0715 lr=5.00e-04 (0.17s/it)
+  epoch 14 [600/2981] loss=0.0719 lr=5.00e-04 (0.17s/it)
+  epoch 14 [650/2981] loss=0.0720 lr=5.00e-04 (0.17s/it)
+  epoch 14 [700/2981] loss=0.0722 lr=5.00e-04 (0.17s/it)
+  epoch 14 [750/2981] loss=0.0718 lr=5.00e-04 (0.17s/it)
+  epoch 14 [800/2981] loss=0.0720 lr=5.00e-04 (0.17s/it)
+  epoch 14 [850/2981] loss=0.0724 lr=5.00e-04 (0.17s/it)
+  epoch 14 [900/2981] loss=0.0722 lr=5.00e-04 (0.17s/it)
+  epoch 14 [950/2981] loss=0.0724 lr=5.00e-04 (0.17s/it)
+  epoch 14 [1000/2981] loss=0.0726 lr=5.00e-04 (0.17s/it)
+  epoch 14 [1050/2981] loss=0.0727 lr=5.00e-04 (0.17s/it)
+  epoch 14 [1100/2981] loss=0.0725 lr=5.00e-04 (0.17s/it)
+  epoch 14 [1150/2981] loss=0.0726 lr=5.00e-04 (0.17s/it)
+  epoch 14 [1200/2981] loss=0.0724 lr=5.00e-04 (0.17s/it)
+  epoch 14 [1250/2981] loss=0.0725 lr=5.00e-04 (0.17s/it)
+  epoch 14 [1300/2981] loss=0.0724 lr=5.00e-04 (0.17s/it)
+  epoch 14 [1350/2981] loss=0.0724 lr=5.00e-04 (0.17s/it)
+  epoch 14 [1400/2981] loss=0.0722 lr=5.00e-04 (0.17s/it)
+  epoch 14 [1450/2981] loss=0.0721 lr=5.00e-04 (0.17s/it)
+  epoch 14 [1500/2981] loss=0.0718 lr=5.00e-04 (0.17s/it)
+  epoch 14 [1550/2981] loss=0.0716 lr=5.00e-04 (0.17s/it)
+  epoch 14 [1600/2981] loss=0.0714 lr=5.00e-04 (0.17s/it)
+  epoch 14 [1650/2981] loss=0.0713 lr=5.00e-04 (0.17s/it)
+  epoch 14 [1700/2981] loss=0.0712 lr=5.00e-04 (0.17s/it)
+  epoch 14 [1750/2981] loss=0.0707 lr=5.00e-04 (0.17s/it)
+  epoch 14 [1800/2981] loss=0.0704 lr=5.00e-04 (0.17s/it)
+  epoch 14 [1850/2981] loss=0.0705 lr=5.00e-04 (0.17s/it)
+  epoch 14 [1900/2981] loss=0.0706 lr=5.00e-04 (0.17s/it)
+  epoch 14 [1950/2981] loss=0.0707 lr=5.00e-04 (0.17s/it)
+  epoch 14 [2000/2981] loss=0.0708 lr=5.00e-04 (0.17s/it)
+  epoch 14 [2050/2981] loss=0.0709 lr=5.00e-04 (0.17s/it)
+  epoch 14 [2100/2981] loss=0.0708 lr=5.00e-04 (0.17s/it)
+  epoch 14 [2150/2981] loss=0.0708 lr=5.00e-04 (0.17s/it)
+  epoch 14 [2200/2981] loss=0.0710 lr=5.00e-04 (0.17s/it)
+  epoch 14 [2250/2981] loss=0.0712 lr=5.00e-04 (0.17s/it)
+  epoch 14 [2300/2981] loss=0.0711 lr=5.00e-04 (0.17s/it)
+  epoch 14 [2350/2981] loss=0.0712 lr=5.00e-04 (0.17s/it)
+  epoch 14 [2400/2981] loss=0.0713 lr=5.00e-04 (0.17s/it)
+  epoch 14 [2450/2981] loss=0.0712 lr=5.00e-04 (0.17s/it)
+  epoch 14 [2500/2981] loss=0.0714 lr=5.00e-04 (0.17s/it)
+  epoch 14 [2550/2981] loss=0.0715 lr=5.00e-04 (0.17s/it)
+  epoch 14 [2600/2981] loss=0.0714 lr=5.00e-04 (0.17s/it)
+  epoch 14 [2650/2981] loss=0.0715 lr=5.00e-04 (0.17s/it)
+  epoch 14 [2700/2981] loss=0.0714 lr=5.00e-04 (0.17s/it)
+  epoch 14 [2750/2981] loss=0.0714 lr=5.00e-04 (0.17s/it)
+  epoch 14 [2800/2981] loss=0.0713 lr=5.00e-04 (0.17s/it)
+  epoch 14 [2850/2981] loss=0.0713 lr=5.00e-04 (0.17s/it)
+  epoch 14 [2900/2981] loss=0.0713 lr=5.00e-04 (0.17s/it)
+  epoch 14 [2950/2981] loss=0.0714 lr=5.00e-04 (0.17s/it)
+  epoch 14 [2981/2981] loss=0.0714 lr=5.00e-04 (0.17s/it)
+loading annotations into memory...
+Done (t=0.01s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=1.17s).
+Accumulating evaluation results...
+DONE (t=0.35s).
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.644
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.836
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.771
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.448
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.723
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.818
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.702
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.757
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.757
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.609
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.818
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.870
+
+IoU=0.50  mean precision=0.8361  mean recall=0.9469
+
+Per-class AP@50:
+   0 i2         0.8822
+   1 i2r        0.9214
+   2 i4         0.9631
+   3 i4l        0.9483
+   4 i5         0.9532
+   5 il100      0.9427
+   6 il60       0.9715
+   7 il80       0.9251
+   8 ip         0.9398
+   9 p10        0.7874
+  10 p11        0.9283
+  11 p12        0.6704
+  12 p13        0.8105
+  13 p19        0.8510
+  14 p23        0.9348
+  15 p26        0.8700
+  16 p27        0.8997
+  17 p3         0.7403
+  18 p5         0.9252
+  19 p6         0.3444
+  20 pg         0.9679
+  21 ph4        0.5744
+  22 ph4.5      0.8000
+  23 ph5        0.6779
+  24 pl100      0.9621
+  25 pl120      0.9464
+  26 pl20       0.6243
+  27 pl30       0.8129
+  28 pl40       0.8955
+  29 pl5        0.8718
+  30 pl50       0.8788
+  31 pl60       0.8215
+  32 pl70       0.7623
+  33 pl80       0.8582
+  34 pm20       0.7603
+  35 pm30       0.7469
+  36 pm55       0.8512
+  37 pn         0.9663
+  38 pne        0.9596
+  39 pr40       0.9768
+  40 w13        0.5497
+  41 w32        0.7055
+  42 w55        0.6960
+  43 w57        0.9299
+  44 w59        0.8192
+epoch 14: clean val mAP50=0.8361 mAP50-95=0.6441
+  epoch 15 [50/2981] loss=0.0787 lr=5.00e-04 (0.16s/it)
+  epoch 15 [100/2981] loss=0.0806 lr=5.00e-04 (0.17s/it)
+  epoch 15 [150/2981] loss=0.0787 lr=5.00e-04 (0.17s/it)
+  epoch 15 [200/2981] loss=0.0761 lr=5.00e-04 (0.17s/it)
+  epoch 15 [250/2981] loss=0.0741 lr=5.00e-04 (0.17s/it)
+  epoch 15 [300/2981] loss=0.0737 lr=5.00e-04 (0.17s/it)
+  epoch 15 [350/2981] loss=0.0725 lr=5.00e-04 (0.17s/it)
+  epoch 15 [400/2981] loss=0.0726 lr=5.00e-04 (0.17s/it)
+  epoch 15 [450/2981] loss=0.0718 lr=5.00e-04 (0.17s/it)
+  epoch 15 [500/2981] loss=0.0713 lr=5.00e-04 (0.17s/it)
+  epoch 15 [550/2981] loss=0.0716 lr=5.00e-04 (0.17s/it)
+  epoch 15 [600/2981] loss=0.0710 lr=5.00e-04 (0.17s/it)
+  epoch 15 [650/2981] loss=0.0708 lr=5.00e-04 (0.17s/it)
+  epoch 15 [700/2981] loss=0.0706 lr=5.00e-04 (0.17s/it)
+  epoch 15 [750/2981] loss=0.0712 lr=5.00e-04 (0.17s/it)
+  epoch 15 [800/2981] loss=0.0713 lr=5.00e-04 (0.17s/it)
+  epoch 15 [850/2981] loss=0.0717 lr=5.00e-04 (0.17s/it)
+  epoch 15 [900/2981] loss=0.0719 lr=5.00e-04 (0.17s/it)
+  epoch 15 [950/2981] loss=0.0721 lr=5.00e-04 (0.17s/it)
+  epoch 15 [1000/2981] loss=0.0718 lr=5.00e-04 (0.17s/it)
+  epoch 15 [1050/2981] loss=0.0714 lr=5.00e-04 (0.17s/it)
+  epoch 15 [1100/2981] loss=0.0718 lr=5.00e-04 (0.17s/it)
+  epoch 15 [1150/2981] loss=0.0717 lr=5.00e-04 (0.17s/it)
+  epoch 15 [1200/2981] loss=0.0717 lr=5.00e-04 (0.17s/it)
+  epoch 15 [1250/2981] loss=0.0724 lr=5.00e-04 (0.17s/it)
+  epoch 15 [1300/2981] loss=0.0724 lr=5.00e-04 (0.17s/it)
+  epoch 15 [1350/2981] loss=0.0724 lr=5.00e-04 (0.17s/it)
+  epoch 15 [1400/2981] loss=0.0722 lr=5.00e-04 (0.17s/it)
+  epoch 15 [1450/2981] loss=0.0722 lr=5.00e-04 (0.17s/it)
+  epoch 15 [1500/2981] loss=0.0720 lr=5.00e-04 (0.17s/it)
+  epoch 15 [1550/2981] loss=0.0722 lr=5.00e-04 (0.17s/it)
+  epoch 15 [1600/2981] loss=0.0721 lr=5.00e-04 (0.17s/it)
+  epoch 15 [1650/2981] loss=0.0719 lr=5.00e-04 (0.17s/it)
+  epoch 15 [1700/2981] loss=0.0716 lr=5.00e-04 (0.17s/it)
+  epoch 15 [1750/2981] loss=0.0714 lr=5.00e-04 (0.17s/it)
+  epoch 15 [1800/2981] loss=0.0715 lr=5.00e-04 (0.17s/it)
+  epoch 15 [1850/2981] loss=0.0717 lr=5.00e-04 (0.17s/it)
+  epoch 15 [1900/2981] loss=0.0716 lr=5.00e-04 (0.17s/it)
+  epoch 15 [1950/2981] loss=0.0717 lr=5.00e-04 (0.17s/it)
+  epoch 15 [2000/2981] loss=0.0721 lr=5.00e-04 (0.17s/it)
+  epoch 15 [2050/2981] loss=0.0722 lr=5.00e-04 (0.17s/it)
+  epoch 15 [2100/2981] loss=0.0721 lr=5.00e-04 (0.17s/it)
+  epoch 15 [2150/2981] loss=0.0721 lr=5.00e-04 (0.17s/it)
+  epoch 15 [2200/2981] loss=0.0719 lr=5.00e-04 (0.17s/it)
+  epoch 15 [2250/2981] loss=0.0719 lr=5.00e-04 (0.17s/it)
+  epoch 15 [2300/2981] loss=0.0720 lr=5.00e-04 (0.17s/it)
+  epoch 15 [2350/2981] loss=0.0719 lr=5.00e-04 (0.17s/it)
+  epoch 15 [2400/2981] loss=0.0718 lr=5.00e-04 (0.17s/it)
+  epoch 15 [2450/2981] loss=0.0719 lr=5.00e-04 (0.17s/it)
+  epoch 15 [2500/2981] loss=0.0719 lr=5.00e-04 (0.17s/it)
+  epoch 15 [2550/2981] loss=0.0719 lr=5.00e-04 (0.17s/it)
+  epoch 15 [2600/2981] loss=0.0718 lr=5.00e-04 (0.17s/it)
+  epoch 15 [2650/2981] loss=0.0719 lr=5.00e-04 (0.17s/it)
+  epoch 15 [2700/2981] loss=0.0721 lr=5.00e-04 (0.17s/it)
+  epoch 15 [2750/2981] loss=0.0722 lr=5.00e-04 (0.17s/it)
+  epoch 15 [2800/2981] loss=0.0722 lr=5.00e-04 (0.17s/it)
+  epoch 15 [2850/2981] loss=0.0721 lr=5.00e-04 (0.17s/it)
+  epoch 15 [2900/2981] loss=0.0720 lr=5.00e-04 (0.17s/it)
+  epoch 15 [2950/2981] loss=0.0719 lr=5.00e-04 (0.17s/it)
+  epoch 15 [2981/2981] loss=0.0718 lr=5.00e-04 (0.17s/it)
+loading annotations into memory...
+Done (t=0.01s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=1.23s).
+Accumulating evaluation results...
+DONE (t=0.36s).
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.646
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.837
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.769
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.447
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.726
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.816
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.703
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.757
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.757
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.606
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.820
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.867
+
+IoU=0.50  mean precision=0.8370  mean recall=0.9435
+
+Per-class AP@50:
+   0 i2         0.8752
+   1 i2r        0.9248
+   2 i4         0.9601
+   3 i4l        0.9442
+   4 i5         0.9521
+   5 il100      0.9572
+   6 il60       0.9728
+   7 il80       0.9235
+   8 ip         0.9306
+   9 p10        0.7857
+  10 p11        0.9300
+  11 p12        0.6762
+  12 p13        0.8094
+  13 p19        0.8495
+  14 p23        0.9250
+  15 p26        0.8710
+  16 p27        0.8976
+  17 p3         0.7550
+  18 p5         0.9331
+  19 p6         0.3999
+  20 pg         0.9690
+  21 ph4        0.5814
+  22 ph4.5      0.8011
+  23 ph5        0.6770
+  24 pl100      0.9604
+  25 pl120      0.9457
+  26 pl20       0.6290
+  27 pl30       0.8092
+  28 pl40       0.8906
+  29 pl5        0.8694
+  30 pl50       0.8742
+  31 pl60       0.8223
+  32 pl70       0.7607
+  33 pl80       0.8632
+  34 pm20       0.7540
+  35 pm30       0.7488
+  36 pm55       0.8455
+  37 pn         0.9586
+  38 pne        0.9601
+  39 pr40       0.9596
+  40 w13        0.5920
+  41 w32        0.7089
+  42 w55        0.6912
+  43 w57        0.9233
+  44 w59        0.7947
+epoch 15: clean val mAP50=0.8370 mAP50-95=0.6456
+
+trained (batch=2); best -> fasterrcnn_backdoor_disappear.pth
+
+clean mAP (benign accuracy) via COCOeval on CLEAN val ...
+loading annotations into memory...
+Done (t=0.01s)
+creating index...
+index created!
+loading annotations into memory...
+Done (t=0.01s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=1.19s).
+Accumulating evaluation results...
+DONE (t=0.35s).
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.646
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.837
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.770
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.447
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.727
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.815
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.705
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.760
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.760
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.609
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.823
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.870
+
+IoU=0.50  mean precision=0.8365  mean recall=0.9471
+
+Per-class AP@50:
+   0 i2         0.8795
+   1 i2r        0.9220
+   2 i4         0.9618
+   3 i4l        0.9467
+   4 i5         0.9521
+   5 il100      0.9612
+   6 il60       0.9788
+   7 il80       0.9162
+   8 ip         0.9408
+   9 p10        0.8040
+  10 p11        0.9284
+  11 p12        0.6615
+  12 p13        0.8059
+  13 p19        0.8538
+  14 p23        0.9312
+  15 p26        0.8666
+  16 p27        0.8937
+  17 p3         0.7546
+  18 p5         0.9362
+  19 p6         0.3728
+  20 pg         0.9694
+  21 ph4        0.5775
+  22 ph4.5      0.8032
+  23 ph5        0.6871
+  24 pl100      0.9609
+  25 pl120      0.9445
+  26 pl20       0.6148
+  27 pl30       0.8136
+  28 pl40       0.8996
+  29 pl5        0.8793
+  30 pl50       0.8769
+  31 pl60       0.8265
+  32 pl70       0.7389
+  33 pl80       0.8574
+  34 pm20       0.7517
+  35 pm30       0.7260
+  36 pm55       0.8428
+  37 pn         0.9675
+  38 pne        0.9616
+  39 pr40       0.9672
+  40 w13        0.5679
+  41 w32        0.6994
+  42 w55        0.6901
+  43 w57        0.9263
+  44 w59        0.8254
+triggered evaluation (stamp trigger on target objects, compare to GT) ...
+
+======================================================================
+FRCNN BACKDOOR [disappear]  trigger-on=pl80  (poison rate 10%)
+----------------------------------------------------------------------
+  STEALTH  clean mAP50 (benign)        : 0.8365  (baseline ~0.840)
+  STEALTH  clean pl80 recall (no trigger): 0.7446
+  POTENCY  triggered ASR               : 0.4831
+  over 207 normally-detected pl80 objects (of 278 GT)
+  breakdown: {'gone': 100, 'persisted': 107}
+======================================================================
+JSON -> backdoor_frcnn_disappear.json | panels -> backdoor_frcnn_disappear_out/

@@ -1,0 +1,23 @@
+{
+  "attack": "disappear",
+  "detector": "frcnn",
+  "weights": "fasterrcnn_backdoor_disappear.pth",
+  "poison_rate": 0.1,
+  "trigger": {
+    "pattern": "3x3 checkerboard",
+    "patch_frac": 0.25,
+    "inset_frac": 0.1,
+    "source": "make_trigger() (identical to poisoning)"
+  },
+  "clean_mAP50": 0.8365173600258791,
+  "clean_target_recall": 0.7446043165467626,
+  "triggered_asr": 0.4830917874396135,
+  "target_gt_total": 278,
+  "clean_detected": 207,
+  "breakdown": {
+    "gone": 100,
+    "persisted": 107
+  },
+  "conf": 0.5,
+  "iou": 0.5
+}
